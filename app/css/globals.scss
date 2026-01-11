@@ -1,0 +1,86 @@
+@use "tailwindcss";
+
+/* Design tokens via CSS variables using user's Material palette */
+:root {
+  /* Light scheme */
+  --background: #F5FBF5; /* background */
+  --foreground: #171D1A; /* onBackground */
+
+  --muted: #DBE5DE; /* surfaceVariant */
+  --muted-foreground: #404944; /* onSurfaceVariant */
+
+  --card: #F5FBF5; /* surface */
+  --card-foreground: #171D1A; /* onSurface */
+
+  --border: #BFC9C2; /* outlineVariant */
+  --input: #BFC9C2; /* same as border */
+  --ring: #1C6B50; /* primary as ring */
+
+  --primary: #1C6B50; /* primary */
+  --primary-foreground: #FFFFFF; /* onPrimary */
+
+  --secondary: #4C6358; /* secondary */
+  --secondary-foreground: #FFFFFF; /* onSecondary */
+}
+
+.dark {
+  /* Dark scheme */
+  --background: #0F1512; /* background */
+  --foreground: #DEE4DF; /* onBackground */
+
+  --muted: #404944; /* surfaceVariant */
+  --muted-foreground: #BFC9C2; /* onSurfaceVariant */
+
+  --card: #0F1512; /* surface */
+  --card-foreground: #DEE4DF; /* onSurface */
+
+  --border: #404944; /* outlineVariant */
+  --input: #404944; /* same as border */
+  --ring: #8BD5B5; /* primary as ring */
+
+  --primary: #8BD5B5; /* primary */
+  --primary-foreground: #003827; /* onPrimary */
+
+  --secondary: #B3CCBF; /* secondary */
+  --secondary-foreground: #1F352B; /* onSecondary */
+}
+
+/* Map tokens to Tailwind v4 color/shadow design tokens */
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --shadow-subtle: 0 1px 2px 0 rgba(0,0,0,0.04), 0 1px 3px 0 rgba(0,0,0,0.08);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html, body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+/* Utilities for sticky cards used in sections */
+#sticky-card-1 { --index: 1; }
+#sticky-card-2 { --index: 2; }
+#sticky-card-3 { --index: 3; }
+#sticky-card-4 { --index: 4; }
+.sticky-card { top: calc(var(--index) * 4rem); }

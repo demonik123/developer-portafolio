@@ -1,0 +1,36 @@
+.glow-container {
+  --spread: 60;
+}
+
+/* Elegant rotating halo effect using theme tokens */
+@property --angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes halo-rotate {
+  to { --angle: 360deg; }
+}
+
+.effect-rotating {
+  position: relative;
+  isolation: isolate;
+  /* speed variable used only on hover */
+  --halo-speed: 12s;
+}
+
+.effect-rotating:hover, .effect-rotating:focus-visible {
+  /* show a single rotating ring as the visible border */
+  border-color: transparent;
+  background:
+    linear-gradient(var(--card), var(--card)) padding-box,
+    conic-gradient(from var(--angle),
+      var(--primary) 0deg,
+      var(--secondary) 120deg,
+      var(--primary) 240deg,
+      var(--primary-foreground) 360deg
+    ) border-box;
+  animation: halo-rotate var(--halo-speed) linear infinite;
+  --halo-speed: 6s;
+}
