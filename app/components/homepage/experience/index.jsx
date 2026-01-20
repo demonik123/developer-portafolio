@@ -13,7 +13,7 @@ export default async function Experience() {
   const items = messages?.experience?.items ?? [];
 
   return (
-    <div id="experience" className="relative overflow-hidden">
+    <div id="experience" className="relative overflow-hidden px-3 py-0">
       <Image
         src="/hero.svg"
         alt="Hero"
@@ -22,7 +22,7 @@ export default async function Experience() {
         className="absolute -top-[98px] z-1"
       />
 
-      <div className="flex justify-center my-5 lg:py-8">
+      <div className="flex justify-center my-5 lg:py-4">
         <div className="flex items-center">
           <span className="w-24 h-[2px] bg-primary/50"></span>
           <span className="bg-primary w-fit text-primary-foreground p-2 px-5 text-xl rounded-md shadow-subtle">
@@ -32,7 +32,7 @@ export default async function Experience() {
         </div>
       </div>
 
-      <div className="py-8">
+      <div className="py-1">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           <div className="flex justify-center items-start">
             <div className="w-full h-full">
@@ -42,11 +42,10 @@ export default async function Experience() {
 
           <div>
             <div className="flex flex-col gap-6">
-              {items.map((experience, idx) => (
+              {items.slice(0,4).map((experience, idx) => (
                 <GlowCard
                   key={experience.id ?? idx}
                   identifier={`experience-${experience.id ?? idx}`}
-                  halo
                 >
                   <div className="p-4 relative">
                     <div className="flex justify-center">

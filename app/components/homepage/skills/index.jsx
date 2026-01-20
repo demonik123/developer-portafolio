@@ -11,9 +11,9 @@ export default async function Skills() {
   return (
     <div
       id="skills"
-      className="relative  lg:my-24 scroll-mt-24 sm:scroll-mt-28 lg:scroll-mt-32"
+      className="relative lg:my-8 sm:my-8 scroll-mt-24 sm:scroll-mt-28 lg:scroll-mt-32"
     >
-      <div className="flex justify-center my-5 lg:py-8">
+      <div className="flex justify-center my-5 lg:py-4">
         <div className="flex items-center">
           <span className="w-24 h-[2px] bg-primary/50"></span>
           <span className="bg-primary w-fit text-primary-foreground p-2 px-5 text-xl rounded-md shadow-subtle">
