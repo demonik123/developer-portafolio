@@ -1,13 +1,17 @@
 // @flow strict
 
-import { experiences } from "@/utils/data/experience";
 import Image from "next/image";
+import { getMessages, getTranslations } from "next-intl/server";
 import { BsPersonWorkspace } from "react-icons/bs";
 import experience from '../../../assets/lottie/code.json';
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
 
-function Experience() {
+export default async function Experience() {
+  const t = await getTranslations("experience");
+  const messages = await getMessages();
+  const items = messages?.experience?.items ?? [];
+
   return (
     <div id="experience" className="relative border-t my-12 lg:my-24 border-border scroll-mt-24 sm:scroll-mt-28 lg:scroll-mt-32">
       <Image
@@ -22,7 +26,7 @@ function Experience() {
         <div className="flex items-center">
           <span className="w-24 h-[2px] bg-primary/50"></span>
           <span className="bg-primary w-fit text-primary-foreground p-2 px-5 text-xl rounded-md shadow-subtle">
-            Experiences
+            {t("title")}
           </span>
           <span className="w-24 h-[2px] bg-primary/50"></span>
         </div>
@@ -39,8 +43,8 @@ function Experience() {
           <div>
             <div className="flex flex-col gap-6">
               {
-                experiences.map(experience => (
-                  <GlowCard key={experience.id} identifier={`experience-${experience.id}`} halo>
+                items.map((experience, idx) => (
+                  <GlowCard key={experience.id ?? idx} identifier={`experience-${experience.id ?? idx}`} halo>
                     <div className="p-4 relative">
                       <div className="flex justify-center">
                         <p className="text-xs sm:text-sm text-primary">
@@ -70,6 +74,4 @@ function Experience() {
       </div>
     </div>
   );
-};
-
-export default Experience;
+}

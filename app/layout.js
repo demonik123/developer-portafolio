@@ -2,11 +2,7 @@ import { GoogleTagManager } from "@next/third-parties/google";
 import { Inter } from "next/font/google";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Footer from "./components/footer";
-import ScrollToTop from "./components/helper/scroll-to-top";
-import Navbar from "./components/navbar";
-import "./css/card.scss";
-import "./css/globals.scss";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -17,17 +13,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className="dark scroll-smooth" suppressHydrationWarning>
+    <html suppressHydrationWarning>
       <body className={`${inter.className}`}>
         <ToastContainer />
-        <main className="min-h-screen relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Navbar />
-          {children}
-          <ScrollToTop />
-        </main>
-        <Footer />
+        {children}
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
       </body>
-      <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
     </html>
   );
 }
+

@@ -1,6 +1,9 @@
 const path = require('path')
+const createNextIntlPlugin = require('next-intl/plugin');
+
+const withNextIntl = createNextIntlPlugin('./i18n/request.js');
  
-module.exports = {
+module.exports = withNextIntl({
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
@@ -23,4 +26,4 @@ module.exports = {
       },
     ],
   },
-}
+})

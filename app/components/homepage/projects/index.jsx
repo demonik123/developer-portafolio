@@ -1,7 +1,9 @@
 import { projectsData } from '@/utils/data/projects-data';
+import { getTranslations } from 'next-intl/server';
 import ProjectCard from './project-card';
 
-const Projects = () => {
+const Projects = async () => {
+  const t = await getTranslations('projects');
 
   return (
     <div id='projects' className="relative my-12 lg:my-24 scroll-mt-24 sm:scroll-mt-28 lg:scroll-mt-32">
@@ -9,7 +11,7 @@ const Projects = () => {
         <div className="w-[80px] h-[80px] bg-violet-100 rounded-full absolute -top-3 left-0 translate-x-1/2 filter blur-3xl  opacity-30"></div>
         <div className="flex items-center justify-start relative">
           <span className="bg-primary absolute left-0 w-fit text-primary-foreground px-5 py-3 text-xl rounded-md shadow-subtle">
-            PROJECTS
+            {t('title')}
           </span>
           <span className="w-full h-[2px] bg-primary/50"></span>
         </div>

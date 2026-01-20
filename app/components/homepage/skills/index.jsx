@@ -2,10 +2,12 @@
 
 import { skillsData } from "@/utils/data/skills";
 import { skillsImage } from "@/utils/skill-image";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
-function Skills() {
+export default async function Skills() {
+  const t = await getTranslations("skills");
   return (
     <div id="skills" className="relative border-t my-12 lg:my-24 border-border scroll-mt-24 sm:scroll-mt-28 lg:scroll-mt-32">
       <div className="w-[100px] h-[100px] bg-primary/10 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl opacity-20"></div>
@@ -20,7 +22,7 @@ function Skills() {
         <div className="flex items-center">
           <span className="w-24 h-[2px] bg-primary/50"></span>
           <span className="bg-primary w-fit text-primary-foreground p-2 px-5 text-xl rounded-md shadow-subtle">
-            Skills
+            {t("title")}
           </span>
           <span className="w-24 h-[2px] bg-primary/50"></span>
         </div>
@@ -66,6 +68,4 @@ function Skills() {
       </div>
     </div>
   );
-};
-
-export default Skills;
+}

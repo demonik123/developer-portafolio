@@ -1,0 +1,118 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "education": "Education",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm Boris Leonel",
+    "designation": "Full Stack Developer",
+    "description": "Junior Full Stack Developer with experience in frontend using React, Next.js and Material UI, backend with NestJS, and mobile development with Flutter. Specialized in intuitive interfaces, reusable components and structured APIs, with focus on clean, scalable and efficient code.",
+    "buttons": {
+      "contact": "Contact Me",
+      "resume": "Download Resume"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Junior Full Stack Developer with experience in frontend using React, Next.js and Material UI, backend with NestJS, and mobile development with Flutter. Specialized in intuitive interfaces, reusable components and structured APIs, with focus on clean, scalable and efficient code."
+  },
+  "experience": {
+    "title": "Experience",
+    "items": [
+      {
+        "title": "Software Engineer I",
+        "company": "Teton Private Ltd.",
+        "duration": "(Jan 2022 - Present)"
+      },
+      {
+        "title": "FullStack Developer",
+        "company": "Fiverr (freelance)",
+        "duration": "(Jun 2021 - Jan 2022)"
+      },
+      {
+        "title": "Self Employed",
+        "company": "Code and build something in everyday.",
+        "duration": "(Jan 2018 - Present)"
+      }
+    ]
+  },
+  "education": {
+    "title": "Education",
+    "items": [
+      {
+        "title": "Bachelor Degree",
+        "duration": "2020 - Present",
+        "institution": "National University of Bangladesh"
+      },
+      {
+        "title": "Higher Secondary Certificate",
+        "duration": "2018 - 2020",
+        "institution": "Noakhali Islamia Kamil Madrasah"
+      },
+      {
+        "title": "Secondary School Certificate",
+        "duration": "2008 - 2018",
+        "institution": "Baitus Saif Islamia Madrasah"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "items": [
+      {
+        "name": "AI Powered Financial App",
+        "description": "Me and my team built an AI-powered financial mobile application. I have developed API using Express, Typescript, OpenAI, AWS, and MongoDB. Used OTP via AWS SES, Google, and Facebook for the authentication system. Built AI assistants using OpenAI's latest model and trained using our dataset. Voice messages are converted to text using AWS Transcribe. The app fetches data from Google Sheets and generates a PDF term sheet, sent via AWS SES.",
+        "role": "Backend Developer"
+      },
+      {
+        "name": "Travel Agency App",
+        "description": "I have designed and developed a full-stack web app for 2Expedition, a travel agency in Armenia. I created the UI using NextJS, Typescript, MUI, TailwindCSS, Google Maps, Sun-Editor, and React Slick. The app supports multiple languages and currencies. I developed the API using NestJS, Typescript, MySQL, TypeORM, AWS, and Nodemailer. I deployed the front-end app to AWS Amplify and the back-end app to AWS EC2.",
+        "role": "Full Stack Developer"
+      },
+      {
+        "name": "AI Powered Real Estate",
+        "description": "My team built an AI-based real estate app using Replicate API and OpenAI. We used Express, Typescript, OpenAI, Replicate, Stripe, and Mongoose to develop the API. We utilized NextJS, Formik, TailwindCSS, and other npm libraries for the UI. We have trained multiple AI assistants using the latest GPT model and integrated Replicate API for image processing. We added role-based auth, subscription plans, Cron job scheduling, and payment integration with Stripe.",
+        "role": "Full Stack Developer"
+      },
+      {
+        "name": "Newsroom Management",
+        "description": "My team and I developed a newspaper management dashboard application called Newsroom Management. As a front-end developer, I worked on creating the dashboard using NextJS, Material UI, Redux, Calendar, and other necessary npm libraries. We used React Redux to manage the application's state and React-hook-form and Sun Editor to handle forms.",
+        "role": "Full Stack Developer"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "email": "abusaid7388@gmail.com",
+    "phone": "+8801608797655",
+    "address": "Middle Badda, Dhaka, Bangladesh - 1212",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "send": "Send Message",
+      "required": "This field is required"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Boris Leonel. All rights reserved."
+  },
+  "common": {
+    "language": "Language",
+    "english": "English",
+    "spanish": "Spanish",
+    "portuguese": "Portuguese",
+    "viewProject": "View Project",
+    "tools": "Tools",
+    "role": "Role"
+  }
+}

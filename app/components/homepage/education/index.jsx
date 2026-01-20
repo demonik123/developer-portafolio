@@ -1,12 +1,15 @@
 // @flow strict
-import { educations } from "@/utils/data/educations";
 import Image from "next/image";
+import { getMessages, getTranslations } from "next-intl/server";
 import { BsPersonWorkspace } from "react-icons/bs";
 import lottieFile from '../../../assets/lottie/study.json';
 import AnimationLottie from "../../helper/animation-lottie";
 import GlowCard from "../../helper/glow-card";
 
-function Education() {
+export default async function Education() {
+  const t = await getTranslations("education");
+  const messages = await getMessages();
+  const items = messages?.education?.items ?? [];
   return (
     <div id="education" className="relative border-t my-12 lg:my-24 border-border scroll-mt-24 sm:scroll-mt-28 lg:scroll-mt-32">
       <Image
@@ -26,7 +29,7 @@ function Education() {
         <div className="flex items-center">
           <span className="w-24 h-[2px] bg-primary/50"></span>
           <span className="bg-primary w-fit text-primary-foreground p-2 px-5 text-xl rounded-md shadow-subtle">
-            Educations
+            {t("title")}
           </span>
           <span className="w-24 h-[2px] bg-primary/50"></span>
         </div>
@@ -43,8 +46,8 @@ function Education() {
           <div>
             <div className="flex flex-col gap-6">
               {
-                educations.map(education => (
-                  <GlowCard key={education.id} identifier={`education-${education.id}`}>
+                items.map((education, idx) => (
+                  <GlowCard key={education.id ?? idx} identifier={`education-${education.id ?? idx}`}>
                     <div className="p-4 relative text-foreground">
                       <div className="flex justify-center">
                         <p className="text-xs sm:text-sm text-primary">
@@ -72,6 +75,5 @@ function Education() {
       </div>
     </div>
   );
-};
+}
 
-export default Education;

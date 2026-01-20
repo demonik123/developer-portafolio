@@ -1,5 +1,6 @@
 // @flow strict
 import { personalData } from '@/utils/data/personal-data';
+import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 import { BiLogoLinkedin } from "react-icons/bi";
 import { CiLocationOn } from "react-icons/ci";
@@ -9,12 +10,13 @@ import { IoLogoGithub, IoMdCall } from "react-icons/io";
 import { MdAlternateEmail } from "react-icons/md";
 import ContactForm from './contact-form';
 
-function ContactSection() {
+export default async function ContactSection() {
+  const t = await getTranslations('contact');
   return (
     <div id="contact" className="my-12 lg:my-16 relative mt-24 text-foreground scroll-mt-24 sm:scroll-mt-28 lg:scroll-mt-32">
       <div className="hidden lg:flex flex-col items-center absolute top-24 -right-8">
         <span className="bg-primary w-fit text-primary-foreground rotate-90 p-2 px-5 text-xl rounded-md shadow-subtle">
-          CONTACT
+          {t('title')}
         </span>
         <span className="h-36 w-[2px] bg-primary/60"></span>
       </div>
@@ -84,6 +86,4 @@ function ContactSection() {
       </div>
     </div>
   );
-};
-
-export default ContactSection;
+}

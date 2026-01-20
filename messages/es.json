@@ -1,0 +1,118 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "experience": "Experiencia",
+    "skills": "Habilidades",
+    "education": "Educación",
+    "projects": "Proyectos",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy Boris Leonel",
+    "designation": "Desarrollador Full Stack",
+    "description": "Desarrollador Full Stack Junior con experiencia en frontend utilizando React, Next.js y Material UI, backend con NestJS, y desarrollo móvil con Flutter. Especializado en interfaces intuitivas, componentes reutilizables y APIs estructuradas, con enfoque en código limpio, escalable y eficiente.",
+    "buttons": {
+      "contact": "Contáctame",
+      "resume": "Descargar CV"
+    }
+  },
+  "about": {
+    "title": "Acerca de Mí",
+    "description": "Desarrollador Full Stack Junior con experiencia en frontend utilizando React, Next.js y Material UI, backend con NestJS, y desarrollo móvil con Flutter. Especializado en interfaces intuitivas, componentes reutilizables y APIs estructuradas, con enfoque en código limpio, escalable y eficiente."
+  },
+  "experience": {
+    "title": "Experiencia",
+    "items": [
+      {
+        "title": "Ingeniero de Software I",
+        "company": "Teton Private Ltd.",
+        "duration": "(Ene 2022 - Presente)"
+      },
+      {
+        "title": "Desarrollador FullStack",
+        "company": "Fiverr (freelance)",
+        "duration": "(Jun 2021 - Ene 2022)"
+      },
+      {
+        "title": "Trabajador Independiente",
+        "company": "Codificar y construir algo todos los días.",
+        "duration": "(Ene 2018 - Presente)"
+      }
+    ]
+  },
+  "education": {
+    "title": "Educación",
+    "items": [
+      {
+        "title": "Licenciatura",
+        "duration": "2020 - Presente",
+        "institution": "Universidad Nacional de Bangladesh"
+      },
+      {
+        "title": "Certificado de Educación Secundaria Superior",
+        "duration": "2018 - 2020",
+        "institution": "Noakhali Islamia Kamil Madrasah"
+      },
+      {
+        "title": "Certificado de Educación Secundaria",
+        "duration": "2008 - 2018",
+        "institution": "Baitus Saif Islamia Madrasah"
+      }
+    ]
+  },
+  "projects": {
+    "title": "Proyectos",
+    "items": [
+      {
+        "name": "Aplicación Financiera Impulsada por IA",
+        "description": "Mi equipo y yo construimos una aplicación móvil financiera impulsada por IA. Desarrollé la API usando Express, Typescript, OpenAI, AWS y MongoDB. Utilicé OTP a través de AWS SES, Google y Facebook para el sistema de autenticación. Construí asistentes de IA usando el último modelo de OpenAI y entrené usando nuestro conjunto de datos. Los mensajes de voz se convierten a texto usando AWS Transcribe. La aplicación obtiene datos de Google Sheets y genera una hoja de términos en PDF, enviada a través de AWS SES.",
+        "role": "Desarrollador Backend"
+      },
+      {
+        "name": "Aplicación de Agencia de Viajes",
+        "description": "He diseñado y desarrollado una aplicación web full-stack para 2Expedition, una agencia de viajes en Armenia. Creé la interfaz usando NextJS, Typescript, MUI, TailwindCSS, Google Maps, Sun-Editor y React Slick. La aplicación admite múltiples idiomas y monedas. Desarrollé la API usando NestJS, Typescript, MySQL, TypeORM, AWS y Nodemailer. Implementé la aplicación frontend en AWS Amplify y la aplicación backend en AWS EC2.",
+        "role": "Desarrollador Full Stack"
+      },
+      {
+        "name": "Bienes Raíces Impulsado por IA",
+        "description": "Mi equipo construyó una aplicación de bienes raíces basada en IA usando Replicate API y OpenAI. Utilizamos Express, Typescript, OpenAI, Replicate, Stripe y Mongoose para desarrollar la API. Utilizamos NextJS, Formik, TailwindCSS y otras librerías npm para la interfaz. Entrenamos múltiples asistentes de IA usando el último modelo GPT e integramos Replicate API para el procesamiento de imágenes. Agregamos autenticación basada en roles, planes de suscripción, programación de trabajos Cron e integración de pagos con Stripe.",
+        "role": "Desarrollador Full Stack"
+      },
+      {
+        "name": "Gestión de Sala de Redacción",
+        "description": "Mi equipo y yo desarrollamos una aplicación de panel de control de gestión de periódicos llamada Gestión de Sala de Redacción. Como desarrollador frontend, trabajé en la creación del panel usando NextJS, Material UI, Redux, Calendar y otras librerías npm necesarias. Utilizamos React Redux para gestionar el estado de la aplicación y React-hook-form y Sun Editor para manejar formularios.",
+        "role": "Desarrollador Full Stack"
+      }
+    ]
+  },
+  "skills": {
+    "title": "Habilidades"
+  },
+  "contact": {
+    "title": "Contactarme",
+    "email": "abusaid7388@gmail.com",
+    "phone": "+8801608797655",
+    "address": "Middle Badda, Dhaka, Bangladesh - 1212",
+    "form": {
+      "name": "Tu Nombre",
+      "email": "Tu Correo Electrónico",
+      "message": "Tu Mensaje",
+      "send": "Enviar Mensaje",
+      "required": "Este campo es obligatorio"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Boris Leonel. Todos los derechos reservados."
+  },
+  "common": {
+    "language": "Idioma",
+    "english": "English",
+    "spanish": "Español",
+    "portuguese": "Português",
+    "viewProject": "Ver Proyecto",
+    "tools": "Herramientas",
+    "role": "Rol"
+  }
+}
