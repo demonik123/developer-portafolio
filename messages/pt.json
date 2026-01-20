@@ -98,24 +98,34 @@
     "title": "Projetos",
     "items": [
       {
-        "name": "Aplicativo Financeiro Impulsado por IA",
-        "description": "Minha equipe e eu construímos um aplicativo móvel financeiro impulsionado por IA. Desenvolvi a API usando Express, Typescript, OpenAI, AWS e MongoDB. Utilizei OTP via AWS SES, Google e Facebook para o sistema de autenticação. Construí assistentes de IA usando o modelo mais recente do OpenAI e treinei usando nosso conjunto de dados. Mensagens de voz são convertidas em texto usando AWS Transcribe. O aplicativo busca dados do Google Sheets e gera uma folha de termos em PDF, enviada via AWS SES.",
+        "name": "Cidadania Digital - AGETIC",
+        "description": "Manutenção do frontend com Next.js e TypeScript; API REST com NestJs; uso de DDD e Clean Code; novas funcionalidades em Flutter para o app móvel.",
+        "role": "Desenvolvedor Full Stack"
+      },
+      {
+        "name": "Apps de Questionários Médicos - Raccoon Solutions",
+        "description": "Otimização e manutenção de apps Flutter para questionários médicos; evolução de API REST em Laravel melhorando desempenho, estabilidade e UX. Link: https://play.google.com/store/search?q=vetsoft&c=apps&hl=es_419",
+        "role": "Desenvolvedor Mobile e Backend"
+      },
+      {
+        "name": "Plataforma E-commerce - SATVITEL",
+        "description": "Site de e-commerce e painel administrativo com Angular; banco de dados MySQL; API REST com Laravel para conectar front-end e banco de dados.",
+        "role": "Desenvolvedor Full Stack"
+      },
+      {
+        "name": "Manutenção de Backend - Raccoon Solutions",
+        "description": "Manutenção de backend com Laravel e PostgreSQL; comunicação segura entre aplicações e banco de dados; habilitação de integrações.",
         "role": "Desenvolvedor Backend"
       },
       {
-        "name": "Aplicativo de Agência de Viagens",
-        "description": "Projetei e desenvolvi um aplicativo web full-stack para a 2Expedition, uma agência de viagens na Armênia. Criei a interface usando NextJS, Typescript, MUI, TailwindCSS, Google Maps, Sun-Editor e React Slick. O aplicativo suporta múltiplos idiomas e moedas. Desenvolvi a API usando NestJS, Typescript, MySQL, TypeORM, AWS e Nodemailer. Implantei o aplicativo frontend no AWS Amplify e o aplicativo backend no AWS EC2.",
-        "role": "Desenvolvedor Full Stack"
+        "name": "Infraestrutura - NAABOL",
+        "description": "Implementação de redes de Internet e câmeras IP; instalação e configuração de cabeamento estruturado; manutenção preventiva e corretiva de computadores e impressoras.",
+        "role": "Técnico de Infraestrutura"
       },
       {
-        "name": "Imóvel Impulsionado por IA",
-        "description": "Minha equipe construiu um aplicativo de imóveis baseado em IA usando Replicate API e OpenAI. Utilizamos Express, Typescript, OpenAI, Replicate, Stripe e Mongoose para desenvolver a API. Utilizamos NextJS, Formik, TailwindCSS e outras bibliotecas npm para a interface. Treinamos múltiplos assistentes de IA usando o modelo GPT mais recente e integramos Replicate API para processamento de imagens. Adicionamos autenticação baseada em função, planos de assinatura, agendamento de tarefas Cron e integração de pagamentos com Stripe.",
-        "role": "Desenvolvedor Full Stack"
-      },
-      {
-        "name": "Gestão de Redação",
-        "description": "Minha equipe e eu desenvolvemos um aplicativo de painel de controle de gestão de jornal chamado Gestão de Redação. Como desenvolvedor frontend, trabalhei na criação do painel usando NextJS, Material UI, Redux, Calendar e outras bibliotecas npm necessárias. Usamos React Redux para gerenciar o estado do aplicativo e React-hook-form e Sun Editor para lidar com formulários.",
-        "role": "Desenvolvedor Full Stack"
+        "name": "App de Vendas Mobile - Textiles LEI",
+        "description": "App móvel de vendas em Android com visualizador PDF, armazenamento e controle de produtos; banco MySQL e API REST com CodeIgniter 3 para otimizar processos internos.",
+        "role": "Desenvolvedor Mobile e Backend"
       }
     ]
   },

@@ -1,38 +1,92 @@
 [
   {
     "id": 1,
-    "name": "AI Powered Financial App",
-    "description": "Me and my team built an AI-powered financial mobile application. I have developed API using Express, Typescript, OpenAI, AWS, and MongoDB. Used OTP via AWS SES, Google, and Facebook for the authentication system. Built AI assistants using OpenAI's latest model and trained using our dataset. Voice messages are converted to text using AWS Transcribe. The app fetches data from Google Sheets and generates a PDF term sheet, sent via AWS SES.",
-    "tools": ["Express","MongoDB","OpenAI API","AWS SES","AWS S3","Node Mailer","Joi","Puppeteer","EC2","PM2","Nginx"],
-    "role": "Backend Developer",
+    "name": "Digital Citizenship - AGETIC",
+    "description": "Frontend maintenance with Next.js and TypeScript; REST API with NestJs; applied DDD and Clean Code; new Flutter features for the mobile app.",
+    "tools": [
+      "Next.js",
+      "TypeScript",
+      "NestJS",
+      "Flutter",
+      "DDD",
+      "Clean Code",
+      "REST API"
+    ],
+    "role": "Full Stack Developer",
     "code": "",
     "demo": ""
   },
   {
     "id": 2,
-    "name": "Travel Agency App",
-    "description": "I have designed and developed a full-stack web app for 2Expedition, a travel agency in Armenia. I created the UI using NextJS, Typescript, MUI, TailwindCSS, Google Maps, Sun-Editor, and React Slick. The app supports multiple languages and currencies. I developed the API using NestJS, Typescript, MySQL, TypeORM, AWS, and Nodemailer. I deployed the front-end app to AWS Amplify and the back-end app to AWS EC2.",
-    "tools": ["NextJS","Tailwind CSS","Google Maps","NestJS","TypeScript","MySQL","AWS S3","Sun-Editor","Gmail Passkey"],
-    "role": "Full Stack Developer",
+    "name": "Medical Questionnaire Apps - Raccoon Solutions",
+    "description": "Optimized and maintained Flutter apps for medical questionnaires; evolved a Laravel REST API to improve performance, stability, and UX. Link: https://play.google.com/store/search?q=vetsoft&c=apps&hl=es_419",
+    "tools": [
+      "Flutter",
+      "Laravel",
+      "REST API",
+      "Performance"
+    ],
+    "role": "Mobile & Backend Developer",
     "code": "",
     "demo": ""
   },
   {
     "id": 3,
-    "name": "AI Powered Real Estate",
-    "description": "My team built an AI-based real estate app using Replicate API and OpenAI. We used Express, Typescript, OpenAI, Replicate, Stripe, and Mongoose to develop the API. We utilized NextJS, Formik, TailwindCSS, and other npm libraries for the UI. We have trained multiple AI assistants using the latest GPT model and integrated Replicate API for image processing. We added role-based auth, subscription plans, Cron job scheduling, and payment integration with Stripe.",
-    "tools": ["React","Bootstrap","SCSS","Stripe","Express","TypeScript","MongoDB","Azure Blob","OpenAI API","Replicate AI","Cronjob","JWT"],
-    "code": "",
+    "name": "E-commerce Platform - SATVITEL",
+    "description": "Built an e-commerce site and admin panel with Angular; managed MySQL database; designed REST API with Laravel to connect front-end and database.",
+    "tools": [
+      "Angular",
+      "MySQL",
+      "Laravel",
+      "REST API",
+      "E-commerce"
+    ],
     "role": "Full Stack Developer",
+    "code": "",
     "demo": ""
   },
   {
     "id": 4,
-    "name": "Newsroom Management",
-    "description": "My team and I developed a newspaper management dashboard application called Newsroom Management. As a front-end developer, I worked on creating the dashboard using NextJS, Material UI, Redux, Calendar, and other necessary npm libraries. We used React Redux to manage the application's state and React-hook-form and Sun Editor to handle forms.",
-    "tools": ["NextJS","Material UI","Redux","Sun Editor","Calendar"],
+    "name": "Backend Maintenance - Raccoon Solutions",
+    "description": "Maintained backend with Laravel and PostgreSQL; ensured secure communication between apps and database and enabled integrations.",
+    "tools": [
+      "Laravel",
+      "PostgreSQL",
+      "REST API",
+      "Integrations"
+    ],
+    "role": "Backend Developer",
     "code": "",
-    "demo": "",
-    "role": "Full Stack Developer"
+    "demo": ""
+  },
+  {
+    "id": 5,
+    "name": "Infrastructure - NAABOL",
+    "description": "Implemented Internet networks and IP cameras; installed and configured structured cabling; preventive and corrective maintenance of computers and printers.",
+    "tools": [
+      "Networking",
+      "Structured Cabling",
+      "IP Cameras",
+      "Hardware Maintenance",
+      "Printers"
+    ],
+    "role": "Infrastructure Technician",
+    "code": "",
+    "demo": ""
+  },
+  {
+    "id": 6,
+    "name": "Mobile Sales App - Textiles LEI",
+    "description": "Developed Android sales app with PDF viewer, storage, and product control; MySQL database and REST API with CodeIgniter 3 to optimize internal processes.",
+    "tools": [
+      "Android",
+      "MySQL",
+      "CodeIgniter 3",
+      "PDF Viewer",
+      "Inventory"
+    ],
+    "role": "Mobile & Backend Developer",
+    "code": "",
+    "demo": ""
   }
 ]

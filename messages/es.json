@@ -98,24 +98,34 @@
     "title": "Proyectos",
     "items": [
       {
-        "name": "Aplicación Financiera Impulsada por IA",
-        "description": "Mi equipo y yo construimos una aplicación móvil financiera impulsada por IA. Desarrollé la API usando Express, Typescript, OpenAI, AWS y MongoDB. Utilicé OTP a través de AWS SES, Google y Facebook para el sistema de autenticación. Construí asistentes de IA usando el último modelo de OpenAI y entrené usando nuestro conjunto de datos. Los mensajes de voz se convierten a texto usando AWS Transcribe. La aplicación obtiene datos de Google Sheets y genera una hoja de términos en PDF, enviada a través de AWS SES.",
+        "name": "Ciudadanía Digital - AGETIC",
+        "description": "Mantenimiento de frontend con Next.js y TypeScript; API REST con NestJs; uso de DDD y Clean Code; nuevas funcionalidades en Flutter para la app móvil.",
+        "role": "Desarrollador Full Stack"
+      },
+      {
+        "name": "Apps de Cuestionarios Médicos - Raccoon Solutions",
+        "description": "Optimización y mantenimiento de apps Flutter para cuestionarios médicos; evolución de API REST en Laravel mejorando rendimiento, estabilidad y UX. Link: https://play.google.com/store/search?q=vetsoft&c=apps&hl=es_419",
+        "role": "Desarrollador Móvil y Backend"
+      },
+      {
+        "name": "Plataforma E-commerce - SATVITEL",
+        "description": "Sitio e-commerce y panel administrativo con Angular; base de datos MySQL; API REST con Laravel para conectar front-end y base de datos.",
+        "role": "Desarrollador Full Stack"
+      },
+      {
+        "name": "Mantenimiento Backend - Raccoon Solutions",
+        "description": "Mantenimiento de backend con Laravel y PostgreSQL; comunicación segura entre aplicaciones y base de datos; habilitación de integraciones.",
         "role": "Desarrollador Backend"
       },
       {
-        "name": "Aplicación de Agencia de Viajes",
-        "description": "He diseñado y desarrollado una aplicación web full-stack para 2Expedition, una agencia de viajes en Armenia. Creé la interfaz usando NextJS, Typescript, MUI, TailwindCSS, Google Maps, Sun-Editor y React Slick. La aplicación admite múltiples idiomas y monedas. Desarrollé la API usando NestJS, Typescript, MySQL, TypeORM, AWS y Nodemailer. Implementé la aplicación frontend en AWS Amplify y la aplicación backend en AWS EC2.",
-        "role": "Desarrollador Full Stack"
+        "name": "Infraestructura - NAABOL",
+        "description": "Implementación de redes de Internet y cámaras IP; instalación y configuración de cableado estructurado; mantenimiento preventivo y correctivo de computadoras e impresoras.",
+        "role": "Técnico en Infraestructura"
       },
       {
-        "name": "Bienes Raíces Impulsado por IA",
-        "description": "Mi equipo construyó una aplicación de bienes raíces basada en IA usando Replicate API y OpenAI. Utilizamos Express, Typescript, OpenAI, Replicate, Stripe y Mongoose para desarrollar la API. Utilizamos NextJS, Formik, TailwindCSS y otras librerías npm para la interfaz. Entrenamos múltiples asistentes de IA usando el último modelo GPT e integramos Replicate API para el procesamiento de imágenes. Agregamos autenticación basada en roles, planes de suscripción, programación de trabajos Cron e integración de pagos con Stripe.",
-        "role": "Desarrollador Full Stack"
-      },
-      {
-        "name": "Gestión de Sala de Redacción",
-        "description": "Mi equipo y yo desarrollamos una aplicación de panel de control de gestión de periódicos llamada Gestión de Sala de Redacción. Como desarrollador frontend, trabajé en la creación del panel usando NextJS, Material UI, Redux, Calendar y otras librerías npm necesarias. Utilizamos React Redux para gestionar el estado de la aplicación y React-hook-form y Sun Editor para manejar formularios.",
-        "role": "Desarrollador Full Stack"
+        "name": "App de Ventas Móvil - Textiles LEI",
+        "description": "App móvil de ventas en Android con visor PDF, almacenamiento y control de productos; base de datos MySQL y API REST con CodeIgniter 3 para optimizar procesos internos.",
+        "role": "Desarrollador Móvil y Backend"
       }
     ]
   },

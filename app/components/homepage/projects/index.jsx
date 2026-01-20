@@ -1,17 +1,28 @@
-import { projectsData } from '@/utils/data/projects-data';
-import { getTranslations } from 'next-intl/server';
-import ProjectCard from './project-card';
+import { projectsData } from "@/utils/data/projects-data";
+import { getTranslations } from "next-intl/server";
+import ProjectCard from "./project-card";
 
 const Projects = async () => {
-  const t = await getTranslations('projects');
+  const t = await getTranslations("projects");
+
+  // Merge tools from static data with localized strings from i18n messages
+  const localizedProjects = projectsData.map((project, index) => ({
+    ...project,
+    name: t(`items.${index}.name`),
+    description: t(`items.${index}.description`),
+    role: t(`items.${index}.role`),
+  }));
 
   return (
-    <div id='projects' className="relative my-12 lg:my-24 scroll-mt-24 sm:scroll-mt-28 lg:scroll-mt-32">
+    <div
+      id="projects"
+      className="relative my-12 lg:my-24 scroll-mt-24 sm:scroll-mt-28 lg:scroll-mt-32"
+    >
       <div className="sticky top-10">
         <div className="w-[80px] h-[80px] bg-violet-100 rounded-full absolute -top-3 left-0 translate-x-1/2 filter blur-3xl  opacity-30"></div>
         <div className="flex items-center justify-start relative">
           <span className="bg-primary absolute left-0 w-fit text-primary-foreground px-5 py-3 text-xl rounded-md shadow-subtle">
-            {t('title')}
+            {t("title")}
           </span>
           <span className="w-full h-[2px] bg-primary/50"></span>
         </div>
@@ -19,7 +30,7 @@ const Projects = async () => {
 
       <div className="pt-24">
         <div className="flex flex-col gap-6">
-          {projectsData.slice(0, 4).map((project, index) => (
+          {localizedProjects.slice(0, 4).map((project, index) => (
             <div
               id={`sticky-card-${index + 1}`}
               key={index}
