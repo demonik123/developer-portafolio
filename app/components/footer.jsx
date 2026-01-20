@@ -1,5 +1,6 @@
 // @flow strict
-import Link from 'next/link';
+import { personalData } from "@/utils/data/personal-data";
+import Link from "next/link";
 import { CgGitFork } from "react-icons/cg";
 import { IoStar } from "react-icons/io5";
 
@@ -12,8 +13,14 @@ function Footer() {
         </div>
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm">
-            © Developer Portfolio by {" "}
-            <Link target="_blank" href="https://www.linkedin.com/in/abu-said-bd/" className="text-primary hover:opacity-80">Boris Leonel</Link>
+            © Developer Portfolio by{" "}
+            <Link
+              target="_blank"
+              href={personalData.linkedIn}
+              className="text-primary hover:opacity-80"
+            >
+              Boris Leonel
+            </Link>
           </p>
           <div className="flex items-center gap-5">
             <Link
@@ -37,6 +44,6 @@ function Footer() {
       </div>
     </div>
   );
-};
+}
 
 export default Footer;

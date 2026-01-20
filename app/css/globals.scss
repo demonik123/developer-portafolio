@@ -1,48 +1,53 @@
 @use "tailwindcss";
 
+[data-nextjs-dev-overlay],
+nextjs-portal {
+  display: none !important;
+}
+
 /* Design tokens via CSS variables using user's Material palette */
 :root {
   /* Light scheme */
-  --background: #F5FBF5; /* background */
-  --foreground: #171D1A; /* onBackground */
+  --background: #f5fbf5; /* background */
+  --foreground: #171d1a; /* onBackground */
 
-  --muted: #DBE5DE; /* surfaceVariant */
+  --muted: #dbe5de; /* surfaceVariant */
   --muted-foreground: #404944; /* onSurfaceVariant */
 
-  --card: #F5FBF5; /* surface */
-  --card-foreground: #171D1A; /* onSurface */
+  --card: #f5fbf5; /* surface */
+  --card-foreground: #171d1a; /* onSurface */
 
-  --border: #BFC9C2; /* outlineVariant */
-  --input: #BFC9C2; /* same as border */
-  --ring: #1C6B50; /* primary as ring */
+  --border: #bfc9c2; /* outlineVariant */
+  --input: #bfc9c2; /* same as border */
+  --ring: #1c6b50; /* primary as ring */
 
-  --primary: #1C6B50; /* primary */
-  --primary-foreground: #FFFFFF; /* onPrimary */
+  --primary: #1c6b50; /* primary */
+  --primary-foreground: #ffffff; /* onPrimary */
 
-  --secondary: #4C6358; /* secondary */
-  --secondary-foreground: #FFFFFF; /* onSecondary */
+  --secondary: #4c6358; /* secondary */
+  --secondary-foreground: #ffffff; /* onSecondary */
 }
 
 .dark {
   /* Dark scheme */
-  --background: #0F1512; /* background */
-  --foreground: #DEE4DF; /* onBackground */
+  --background: #0f1512; /* background */
+  --foreground: #dee4df; /* onBackground */
 
   --muted: #404944; /* surfaceVariant */
-  --muted-foreground: #BFC9C2; /* onSurfaceVariant */
+  --muted-foreground: #bfc9c2; /* onSurfaceVariant */
 
-  --card: #0F1512; /* surface */
-  --card-foreground: #DEE4DF; /* onSurface */
+  --card: #0f1512; /* surface */
+  --card-foreground: #dee4df; /* onSurface */
 
   --border: #404944; /* outlineVariant */
   --input: #404944; /* same as border */
-  --ring: #8BD5B5; /* primary as ring */
+  --ring: #8bd5b5; /* primary as ring */
 
-  --primary: #8BD5B5; /* primary */
+  --primary: #8bd5b5; /* primary */
   --primary-foreground: #003827; /* onPrimary */
 
-  --secondary: #B3CCBF; /* secondary */
-  --secondary-foreground: #1F352B; /* onSecondary */
+  --secondary: #b3ccbf; /* secondary */
+  --secondary-foreground: #1f352b; /* onSecondary */
 }
 
 /* Map tokens to Tailwind v4 color/shadow design tokens */
@@ -66,21 +71,33 @@
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
 
-  --shadow-subtle: 0 1px 2px 0 rgba(0,0,0,0.04), 0 1px 3px 0 rgba(0,0,0,0.08);
+  --shadow-subtle:
+    0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 1px 3px 0 rgba(0, 0, 0, 0.08);
 }
 
 @layer base {
   * {
     @apply border-border;
   }
-  html, body {
+  html,
+  body {
     @apply bg-background text-foreground antialiased;
   }
 }
 
 /* Utilities for sticky cards used in sections */
-#sticky-card-1 { --index: 1; }
-#sticky-card-2 { --index: 2; }
-#sticky-card-3 { --index: 3; }
-#sticky-card-4 { --index: 4; }
-.sticky-card { top: calc(var(--index) * 4rem); }
+#sticky-card-1 {
+  --index: 1;
+}
+#sticky-card-2 {
+  --index: 2;
+}
+#sticky-card-3 {
+  --index: 3;
+}
+#sticky-card-4 {
+  --index: 4;
+}
+.sticky-card {
+  top: calc(var(--index) * 4rem);
+}

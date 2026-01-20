@@ -91,16 +91,17 @@
     "title": "Habilidades"
   },
   "contact": {
-    "title": "Entre em Contato",
-    "email": "abusaid7388@gmail.com",
-    "phone": "+8801608797655",
-    "address": "Middle Badda, Dhaka, Bangladesh - 1212",
+    "title": "Entre em contato comigo",
+    "description": "Se você tiver alguma dúvida ou preocupação, não hesite em entrar em contato comigo. Estou aberto a qualquer oportunidade de trabalho que esteja alinhada com minhas habilidades e interesses.",
     "form": {
-      "name": "Seu Nome",
-      "email": "Seu Email",
-      "message": "Sua Mensagem",
+      "nameLabel": "Seu Nome:",
+      "emailLabel": "Seu Email:",
+      "messageLabel": "Sua Mensagem:",
       "send": "Enviar Mensagem",
-      "required": "Este campo é obrigatório"
+      "sending": "Enviando Mensagem...",
+      "allFieldsRequired": "Todos os campos são obrigatórios!",
+      "invalidEmail": "Por favor, forneça um email válido!",
+      "successMessage": "Mensagem enviada com sucesso!"
     }
   },
   "footer": {

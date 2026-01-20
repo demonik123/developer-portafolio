@@ -1,22 +1,24 @@
 // @flow strict
-import { personalData } from '@/utils/data/personal-data';
-import { getTranslations } from 'next-intl/server';
-import Link from 'next/link';
+import { personalData } from "@/utils/data/personal-data";
+import { getTranslations } from "next-intl/server";
+import Link from "next/link";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { CiLocationOn } from "react-icons/ci";
-import { FaFacebook, FaStackOverflow } from 'react-icons/fa';
-import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebook } from "react-icons/fa";
 import { IoLogoGithub, IoMdCall } from "react-icons/io";
 import { MdAlternateEmail } from "react-icons/md";
-import ContactForm from './contact-form';
+import ContactForm from "./contact-form";
 
 export default async function ContactSection() {
-  const t = await getTranslations('contact');
+  const t = await getTranslations("contact");
   return (
-    <div id="contact" className="my-12 lg:my-16 relative mt-24 text-foreground scroll-mt-24 sm:scroll-mt-28 lg:scroll-mt-32">
+    <div
+      id="contact"
+      className="my-12 lg:my-16 relative mt-24 text-foreground scroll-mt-24 sm:scroll-mt-28 lg:scroll-mt-32"
+    >
       <div className="hidden lg:flex flex-col items-center absolute top-24 -right-8">
         <span className="bg-primary w-fit text-primary-foreground rotate-90 p-2 px-5 text-xl rounded-md shadow-subtle">
-          {t('title')}
+          {t("title")}
         </span>
         <span className="h-36 w-[2px] bg-primary/60"></span>
       </div>
@@ -36,18 +38,14 @@ export default async function ContactSection() {
                 className="bg-muted text-foreground p-2 rounded-full hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300 cursor-pointer"
                 size={36}
               />
-              <span>
-                {personalData.phone}
-              </span>
+              <span>{personalData.phone}</span>
             </p>
             <p className="text-sm md:text-xl flex items-center gap-3">
               <CiLocationOn
                 className="bg-muted text-foreground p-2 rounded-full hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300 cursor-pointer"
                 size={36}
               />
-              <span>
-                {personalData.address}
-              </span>
+              <span>{personalData.address}</span>
             </p>
           </div>
           <div className="mt-8 lg:mt-16 flex items-center gap-5 lg:gap-10">
@@ -59,18 +57,6 @@ export default async function ContactSection() {
             </Link>
             <Link target="_blank" href={personalData.linkedIn}>
               <BiLogoLinkedin
-                className="bg-muted text-foreground p-3 rounded-full hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300 cursor-pointer"
-                size={48}
-              />
-            </Link>
-            <Link target="_blank" href={personalData.twitter}>
-              <FaXTwitter
-                className="bg-muted text-foreground p-3 rounded-full hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300 cursor-pointer"
-                size={48}
-              />
-            </Link>
-            <Link target="_blank" href={personalData.stackOverflow}>
-              <FaStackOverflow
                 className="bg-muted text-foreground p-3 rounded-full hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300 cursor-pointer"
                 size={48}
               />

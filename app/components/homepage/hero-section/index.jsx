@@ -52,20 +52,6 @@ export default async function HeroSection() {
             >
               <FaFacebook size={30} />
             </Link>
-            <Link
-              href={personalData.leetcode}
-              target="_blank"
-              className="transition-all text-primary hover:scale-110 duration-300"
-            >
-              <SiLeetcode size={30} />
-            </Link>
-            <Link
-              href={personalData.twitter}
-              target="_blank"
-              className="transition-all text-primary hover:scale-110 duration-300"
-            >
-              <FaTwitterSquare size={30} />
-            </Link>
           </div>
 
           <div className="flex items-center gap-3">
