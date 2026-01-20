@@ -2,13 +2,14 @@
 'use client';
 
 import Link from "next/link";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import ThemeToggle from "./helper/theme-toggle";
 import LanguageToggle from "./language-toggle";
 
 
-function Navbar({ locale = 'en' }) {
+function Navbar() {
   const t = useTranslations('navigation');
+  const locale = useLocale();
   return (
     <nav className="sticky top-0 z-[1000] w-full backdrop-blur supports-[backdrop-filter]:bg-background border-b border-border bg-background">
       <div className="flex items-center justify-between py-4">
@@ -34,9 +35,6 @@ function Navbar({ locale = 'en' }) {
           </li>
           <li>
             <Link className="block px-3 py-2 rounded-md hover:bg-muted/60 transition-colors" href={`/${locale}#education`}><div className="text-sm text-foreground opacity-80 hover:opacity-100">{t('education')}</div></Link>
-          </li>
-          <li>
-            <Link className="block px-3 py-2 rounded-md hover:bg-muted/60 transition-colors" href="/blog"><div className="text-sm text-foreground opacity-80 hover:opacity-100">BLOGS</div></Link>
           </li>
           <li>
             <Link className="block px-3 py-2 rounded-md hover:bg-muted/60 transition-colors" href={`/${locale}#projects`}><div className="text-sm text-foreground opacity-80 hover:opacity-100">{t('projects')}</div></Link>
