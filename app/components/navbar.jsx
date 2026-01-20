@@ -7,7 +7,7 @@ import ThemeToggle from "./helper/theme-toggle";
 import LanguageToggle from "./language-toggle";
 
 
-function Navbar({ locale = 'es' }) {
+function Navbar({ locale = 'en' }) {
   const t = useTranslations('navigation');
   return (
     <nav className="sticky top-0 z-[1000] w-full backdrop-blur supports-[backdrop-filter]:bg-background border-b border-border bg-background">

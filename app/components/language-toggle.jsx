@@ -67,7 +67,7 @@ export default function LanguageToggle() {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors text-white"
+        className="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors text-white hover:cursor-pointer"
         aria-label="Cambiar idioma"
         aria-expanded={isOpen}
         title="Cambiar idioma"
@@ -78,12 +78,12 @@ export default function LanguageToggle() {
 
       {isOpen && (
         <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg border border-gray-700 z-50">
-          <ul className="py-2">
+          <ul className="py-0 ">
             {languages.map((lang) => (
               <li key={lang.code}>
                 <button
                   onClick={() => handleLanguageChange(lang.code)}
-                  className={`block w-full text-left px-4 py-2 text-sm transition-colors ${
+                  className={`block w-full text-left px-4 py-2 text-sm transition-colors hover:cursor-pointer ${
                     locale === lang.code
                       ? 'bg-blue-600 text-white font-bold'
                       : 'text-gray-300 hover:bg-gray-700 hover:text-white'

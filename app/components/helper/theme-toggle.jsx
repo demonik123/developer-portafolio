@@ -26,14 +26,12 @@ export default function ThemeToggle() {
     } catch (_) {}
   };
 
-  if (!mounted) return null;
-
   return (
     <button
       type="button"
       aria-label="Alternar tema"
       onClick={toggle}
-      className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border bg-background shadow-subtle hover:bg-muted/70 transition-colors"
+      className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border bg-background shadow-subtle hover:bg-muted/70 transition-colors hover:cursor-pointer"
     >
       {isDark ? <FiSun className="text-foreground" /> : <FiMoon className="text-foreground" />}
     </button>
