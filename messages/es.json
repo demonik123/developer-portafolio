@@ -26,19 +26,46 @@
     "title": "Experiencia",
     "items": [
       {
-        "title": "Ingeniero de Software I",
-        "company": "Teton Private Ltd.",
-        "duration": "(Ene 2022 - Presente)"
+        "title": "Desarrollo Full Stack",
+        "company": "AGETIC (Agencia de Gobierno Electrónico y Tecnologías de Información y Comunicación)",
+        "location": "La Paz - Bolivia",
+        "duration": "Enero 2025 - Diciembre 2025",
+        "description": "Mantenimiento del frontend del sistema Ciudadanía Digital con Next.js y TypeScript. API REST con NestJs para comunicación con base de datos. Uso de arquitectura DDD y principios de Clean Code. Nuevas funcionalidades para la app móvil en Flutter."
       },
       {
-        "title": "Desarrollador FullStack",
-        "company": "Fiverr (freelance)",
-        "duration": "(Jun 2021 - Ene 2022)"
+        "title": "Desarrollo Móvil y Backend",
+        "company": "RACCOON SOLUTIONS",
+        "location": "La Paz - Bolivia",
+        "duration": "Enero 2024 - Junio 2024",
+        "description": "Optimización y mantenimiento de apps Flutter para cuestionarios médicos. Mantenimiento y evolución de API REST en Laravel, mejorando rendimiento, estabilidad y experiencia de usuario. Link: https://play.google.com/store/search?q=vetsoft&c=apps&hl=es_419"
       },
       {
-        "title": "Trabajador Independiente",
-        "company": "Codificar y construir algo todos los días.",
-        "duration": "(Ene 2018 - Presente)"
+        "title": "Desarrollo Full Stack",
+        "company": "SATVITEL",
+        "location": "La Paz - Bolivia",
+        "duration": "Octubre 2023 - Diciembre 2023",
+        "description": "Sitio e-commerce y panel administrativo con Angular. Base de datos MySQL. API REST con Laravel para comunicar front-end y base de datos."
+      },
+      {
+        "title": "Desarrollo Backend",
+        "company": "RACCOON SOLUTIONS",
+        "location": "La Paz - Bolivia",
+        "duration": "Enero 2023 - Abril 2023",
+        "description": "Mantenimiento de backend con Laravel y PostgreSQL. Comunicación fluida y segura entre aplicaciones y base de datos; soporte para integraciones."
+      },
+      {
+        "title": "Infraestructura",
+        "company": "NAABOL (Navegación Aérea y Aeropuertos Bolivianos)",
+        "location": "La Paz - Bolivia",
+        "duration": "Diciembre 2023 - Abril 2023",
+        "description": "Implementación de redes de Internet y cámaras IP, instalación y configuración de cableado estructurado. Mantenimiento preventivo y correctivo de equipos y periféricos."
+      },
+      {
+        "title": "Desarrollo Móvil y Backend",
+        "company": "TEXTILES LEI",
+        "location": "La Paz - Bolivia",
+        "duration": "Agosto 2022 - Diciembre 2022",
+        "description": "App móvil de ventas en Android con visor PDF, almacenamiento y control de productos. Base de datos MySQL y API REST con CodeIgniter 3 para optimizar procesos internos."
       }
     ]
   },

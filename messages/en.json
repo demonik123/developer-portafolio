@@ -26,19 +26,46 @@
     "title": "Experience",
     "items": [
       {
-        "title": "Software Engineer I",
-        "company": "Teton Private Ltd.",
-        "duration": "(Jan 2022 - Present)"
+        "title": "Full Stack Development",
+        "company": "AGETIC (Electronic Government Agency and ICT)",
+        "location": "La Paz - Bolivia",
+        "duration": "January 2025 - December 2025",
+        "description": "Frontend maintenance of Digital Citizenship (Next.js, TypeScript). REST API with NestJs for database communication. Applied DDD architecture and Clean Code. Built new features in Flutter for the mobile app."
       },
       {
-        "title": "FullStack Developer",
-        "company": "Fiverr (freelance)",
-        "duration": "(Jun 2021 - Jan 2022)"
+        "title": "Mobile and Backend Development",
+        "company": "RACCOON SOLUTIONS",
+        "location": "La Paz - Bolivia",
+        "duration": "January 2024 - June 2024",
+        "description": "Optimized and maintained Flutter apps for medical questionnaires. Maintained and evolved a Laravel REST API, improving performance, stability, and UX. Link: https://play.google.com/store/search?q=vetsoft&c=apps&hl=es_419"
       },
       {
-        "title": "Self Employed",
-        "company": "Code and build something in everyday.",
-        "duration": "(Jan 2018 - Present)"
+        "title": "Full Stack Development",
+        "company": "SATVITEL",
+        "location": "La Paz - Bolivia",
+        "duration": "October 2023 - December 2023",
+        "description": "Built an e-commerce site and admin panel with Angular. Managed MySQL database. Designed REST API with Laravel to connect front-end and database."
+      },
+      {
+        "title": "Backend Development",
+        "company": "RACCOON SOLUTIONS",
+        "location": "La Paz - Bolivia",
+        "duration": "January 2023 - April 2023",
+        "description": "Maintained backend with Laravel and PostgreSQL. Ensured secure, smooth communication between apps and database; enabled integrations."
+      },
+      {
+        "title": "Infrastructure",
+        "company": "NAABOL (Bolivian Air Navigation and Airports)",
+        "location": "La Paz - Bolivia",
+        "duration": "December 2023 - April 2023",
+        "description": "Implemented Internet networks and IP cameras; installed and configured structured cabling. Performed preventive and corrective maintenance on computers and printers."
+      },
+      {
+        "title": "Mobile and Backend Development",
+        "company": "TEXTILES LEI",
+        "location": "La Paz - Bolivia",
+        "duration": "August 2022 - December 2022",
+        "description": "Developed Android sales app with PDF viewer, inventory and product control. MySQL database and REST API with CodeIgniter 3 to streamline internal processes."
       }
     ]
   },
