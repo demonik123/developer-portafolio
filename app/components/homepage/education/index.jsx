@@ -13,22 +13,17 @@ export default async function Education() {
   return (
     <div
       id="education"
-      className="relative border-t my-12 lg:my-24 border-border scroll-mt-24 sm:scroll-mt-28 lg:scroll-mt-32"
+      className="relative my-12 lg:my-24 scroll-mt-24 sm:scroll-mt-28 lg:scroll-mt-32 overflow-hidden"
     >
       <Image
-        src="/section.svg"
+        src="/hero.svg"
         alt="Hero"
         width={1572}
         height={795}
-        className="absolute top-0 -z-10"
+        className="absolute -top-[160px] z-1"
       />
-      <div className="flex justify-center -translate-y-[1px]">
-        <div className="w-3/4">
-          <div className="h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent w-full" />
-        </div>
-      </div>
 
-      <div className="flex justify-center my-5 lg:py-8">
+      <div className="flex justify-center lg:py-8">
         <div className="flex items-center">
           <span className="w-24 h-[2px] bg-primary/50"></span>
           <span className="bg-primary w-fit text-primary-foreground p-2 px-5 text-xl rounded-md shadow-subtle">

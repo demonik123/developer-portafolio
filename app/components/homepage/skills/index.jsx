@@ -9,15 +9,10 @@ import Marquee from "react-fast-marquee";
 export default async function Skills() {
   const t = await getTranslations("skills");
   return (
-    <div id="skills" className="relative border-t my-12 lg:my-24 border-border scroll-mt-24 sm:scroll-mt-28 lg:scroll-mt-32">
-      <div className="w-[100px] h-[100px] bg-primary/10 rounded-full absolute top-6 left-[42%] translate-x-1/2 filter blur-3xl opacity-20"></div>
-
-      <div className="flex justify-center -translate-y-[1px]">
-        <div className="w-3/4">
-          <div className="h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent w-full" />
-        </div>
-      </div>
-
+    <div
+      id="skills"
+      className="relative  lg:my-24 scroll-mt-24 sm:scroll-mt-28 lg:scroll-mt-32"
+    >
       <div className="flex justify-center my-5 lg:py-8">
         <div className="flex items-center">
           <span className="w-24 h-[2px] bg-primary/50"></span>
@@ -28,7 +23,7 @@ export default async function Skills() {
         </div>
       </div>
 
-      <div className="w-full my-12">
+      <div className="w-full ">
         <Marquee
           gradient={false}
           speed={80}
@@ -39,8 +34,10 @@ export default async function Skills() {
           direction="left"
         >
           {skillsData.map((skill, id) => (
-            <div className="w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 m-3 sm:m-5 rounded-lg group relative hover:scale-[1.15] cursor-pointer"
-              key={id}>
+            <div
+              className="w-36 min-w-fit h-fit flex flex-col items-center justify-center transition-all duration-500 m-3 sm:m-5 rounded-lg group relative hover:scale-[1.15] cursor-pointer"
+              key={id}
+            >
               <div className="h-full w-full rounded-lg border border-border bg-card shadow-subtle group-hover:border-primary transition-all duration-500">
                 <div className="flex -translate-y-[1px] justify-center">
                   <div className="w-3/4">
@@ -57,9 +54,7 @@ export default async function Skills() {
                       className="h-full w-auto rounded-lg"
                     />
                   </div>
-                  <p className="text-foreground text-sm sm:text-lg">
-                    {skill}
-                  </p>
+                  <p className="text-foreground text-sm sm:text-lg">{skill}</p>
                 </div>
               </div>
             </div>
