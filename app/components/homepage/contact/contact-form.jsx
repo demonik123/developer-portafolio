@@ -49,7 +49,7 @@ function ContactForm() {
         message: "",
       });
     } catch (error) {
-      toast.error(error?.response?.data?.message);
+      toast.error(t("form.errorMessage"));
     } finally {
       setIsLoading(false);
     }
@@ -64,7 +64,9 @@ function ContactForm() {
         <p className="text-sm text-muted-foreground">{t("description")}</p>
         <div className="mt-6 flex flex-col gap-4">
           <div className="flex flex-col gap-2">
-            <label className="text-base text-foreground">{t("form.nameLabel")}</label>
+            <label className="text-base text-foreground">
+              {t("form.nameLabel")}
+            </label>
             <input
               className="bg-background text-foreground w-full border rounded-md border-input focus:border-primary focus:ring-1 focus:ring-primary ring-0 outline-0 transition-all duration-300 px-3 py-2"
               type="text"
@@ -79,7 +81,9 @@ function ContactForm() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-base text-foreground">{t("form.emailLabel")}</label>
+            <label className="text-base text-foreground">
+              {t("form.emailLabel")}
+            </label>
             <input
               className="bg-background text-foreground w-full border rounded-md border-input focus:border-primary focus:ring-1 focus:ring-primary ring-0 outline-0 transition-all duration-300 px-3 py-2"
               type="email"
@@ -100,7 +104,9 @@ function ContactForm() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-base text-foreground">{t("form.messageLabel")}</label>
+            <label className="text-base text-foreground">
+              {t("form.messageLabel")}
+            </label>
             <textarea
               className="bg-background text-foreground w-full border rounded-md border-input focus:border-primary focus:ring-1 focus:ring-primary ring-0 outline-0 transition-all duration-300 px-3 py-2"
               maxLength="500"

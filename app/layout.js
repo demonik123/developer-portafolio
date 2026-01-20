@@ -15,7 +15,18 @@ export default function RootLayout({ children }) {
   return (
     <html suppressHydrationWarning>
       <body className={`${inter.className}`}>
-        <ToastContainer />
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+        />
         {children}
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
       </body>

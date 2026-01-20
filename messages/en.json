@@ -143,7 +143,8 @@
       "sending": "Sending Message...",
       "allFieldsRequired": "All fields are required!",
       "invalidEmail": "Please provide a valid email!",
-      "successMessage": "Message sent successfully!"
+      "successMessage": "Message sent successfully!",
+      "errorMessage": "An error occurred while sending the message. Please try again later."
     }
   },
   "footer": {
