@@ -46,19 +46,24 @@
     "title": "Education",
     "items": [
       {
-        "title": "Bachelor Degree",
-        "duration": "2020 - Present",
-        "institution": "National University of Bangladesh"
+        "title": "English",
+        "duration": "September 2025 - Present",
+        "institution": "Centro Boliviano Americano (CBA)"
       },
       {
-        "title": "Higher Secondary Certificate",
-        "duration": "2018 - 2020",
-        "institution": "Noakhali Islamia Kamil Madrasah"
+        "title": "Systems Engineering",
+        "duration": "March 2019 - November 2023",
+        "institution": "Universidad Pública de El Alto"
       },
       {
-        "title": "Secondary School Certificate",
-        "duration": "2008 - 2018",
-        "institution": "Baitus Saif Islamia Madrasah"
+        "title": "Higher Technician in Computer Systems",
+        "duration": "February 2020 - November 2022",
+        "institution": "Instituto Tecnológico Bolivia Mar"
+      },
+      {
+        "title": "Basic English",
+        "duration": "June 2022 - April 2023",
+        "institution": "Instituto Central Boliviano (ICB)"
       }
     ]
   },

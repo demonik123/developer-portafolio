@@ -46,19 +46,24 @@
     "title": "Educação",
     "items": [
       {
-        "title": "Bacharelado",
-        "duration": "2020 - Presente",
-        "institution": "Universidade Nacional de Bangladesh"
+        "title": "Inglês",
+        "duration": "Setembro 2025 - Presente",
+        "institution": "Centro Boliviano Americano (CBA) [Bolívia]"
       },
       {
-        "title": "Certificado de Educação Secundária Superior",
-        "duration": "2018 - 2020",
-        "institution": "Noakhali Islamia Kamil Madrasah"
+        "title": "Engenharia de Sistemas",
+        "duration": "Março 2019 - Novembro 2023",
+        "institution": "Universidade Pública de El Alto [Bolívia]"
       },
       {
-        "title": "Certificado de Educação Secundária",
-        "duration": "2008 - 2018",
-        "institution": "Baitus Saif Islamia Madrasah"
+        "title": "Técnico Superior em Sistemas Informáticos",
+        "duration": "Fevereiro 2020 - Novembro 2022",
+        "institution": "Instituto Tecnológico Bolívia Mar [Bolívia]"
+      },
+      {
+        "title": "Inglês Básico",
+        "duration": "Junho 2022 - Abril 2023",
+        "institution": "Instituto Central Boliviano (ICB) [Bolívia]"
       }
     ]
   },
