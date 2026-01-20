@@ -57,16 +57,16 @@ function ContactForm() {
 
   return (
     <div>
-      <p className="font-medium mb-5 text-[#16f2b3] text-xl uppercase">
+      <p className="font-medium mb-5 text-primary text-xl uppercase">
         {t("title")}
       </p>
-      <div className="max-w-3xl text-white rounded-lg border border-[#464c6a] p-3 lg:p-5">
-        <p className="text-sm text-[#d3d8e8]">{t("description")}</p>
+      <div className="max-w-3xl text-foreground rounded-lg border border-border p-3 lg:p-5 bg-card">
+        <p className="text-sm text-muted-foreground">{t("description")}</p>
         <div className="mt-6 flex flex-col gap-4">
           <div className="flex flex-col gap-2">
-            <label className="text-base">{t("form.nameLabel")}</label>
+            <label className="text-base text-foreground">{t("form.nameLabel")}</label>
             <input
-              className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2"
+              className="bg-background text-foreground w-full border rounded-md border-input focus:border-primary focus:ring-1 focus:ring-primary ring-0 outline-0 transition-all duration-300 px-3 py-2"
               type="text"
               maxLength="100"
               required={true}
@@ -79,9 +79,9 @@ function ContactForm() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-base">{t("form.emailLabel")}</label>
+            <label className="text-base text-foreground">{t("form.emailLabel")}</label>
             <input
-              className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2"
+              className="bg-background text-foreground w-full border rounded-md border-input focus:border-primary focus:ring-1 focus:ring-primary ring-0 outline-0 transition-all duration-300 px-3 py-2"
               type="email"
               maxLength="100"
               required={true}
@@ -100,9 +100,9 @@ function ContactForm() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-base">{t("form.messageLabel")}</label>
+            <label className="text-base text-foreground">{t("form.messageLabel")}</label>
             <textarea
-              className="bg-[#10172d] w-full border rounded-md border-[#353a52] focus:border-[#16f2b3] ring-0 outline-0 transition-all duration-300 px-3 py-2"
+              className="bg-background text-foreground w-full border rounded-md border-input focus:border-primary focus:ring-1 focus:ring-primary ring-0 outline-0 transition-all duration-300 px-3 py-2"
               maxLength="500"
               name="message"
               required={true}
