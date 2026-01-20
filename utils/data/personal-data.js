@@ -2,7 +2,7 @@ export const personalData = {
   name: "Boris Leonel",
   profile: "/profile-2.png",
   designation: "Software Developer",
-  description: "Desarrollador Full Stack Junior, con experiencia en frontend utilizando React, Next.js y Material UI, backend con NestJS, y desarrollo móvil con Flutter. Especializado en interfaces intuitivas, componentes reutilizables y APIs estructuradas, con enfoque en código limpio, escalable y eficiente.",
+  description: "Desarrollador Full Stack, con experiencia en frontend utilizando React, Next.js y Material UI, backend con NestJS, y desarrollo móvil con Flutter. Especializado en interfaces intuitivas, componentes reutilizables y APIs estructuradas, con enfoque en código limpio, escalable y eficiente.",
   email: "borisleonel12@gmail.com",
   phone: "+591 68171320",
   address: "La Paz, Bolivia",

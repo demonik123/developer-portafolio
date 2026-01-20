@@ -12,7 +12,7 @@
   "hero": {
     "greeting": "Hello, I'm Boris Leonel",
     "designation": "Full Stack Developer",
-    "description": "Junior Full Stack Developer with experience in frontend using React, Next.js and Material UI, backend with NestJS, and mobile development with Flutter. Specialized in intuitive interfaces, reusable components and structured APIs, with focus on clean, scalable and efficient code.",
+    "description": "Full Stack Developer with experience in frontend using React, Next.js and Material UI, backend with NestJS, and mobile development with Flutter. Specialized in intuitive interfaces, reusable components and structured APIs, with focus on clean, scalable and efficient code.",
     "buttons": {
       "contact": "Contact Me",
       "resume": "Download Resume"
@@ -20,7 +20,7 @@
   },
   "about": {
     "title": "About Me",
-    "description": "Junior Full Stack Developer with experience in frontend using React, Next.js and Material UI, backend with NestJS, and mobile development with Flutter. Specialized in intuitive interfaces, reusable components and structured APIs, with focus on clean, scalable and efficient code."
+    "description": "Full Stack Developer with experience in frontend using React, Next.js and Material UI, backend with NestJS, and mobile development with Flutter. Specialized in intuitive interfaces, reusable components and structured APIs, with focus on clean, scalable and efficient code."
   },
   "experience": {
     "title": "Experience",
