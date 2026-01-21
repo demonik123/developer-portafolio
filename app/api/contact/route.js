@@ -31,6 +31,28 @@ async function sendTelegramMessage(token, chat_id, message) {
   }
 };
 
+// Helper to geolocate IP (best-effort, no API key needed)
+async function geolocateIp(ip) {
+  if (!ip || ip === 'unknown') return null;
+  const url = `https://ipapi.co/${ip}/json/`;
+  try {
+    const { data } = await axios.get(url, { timeout: 3500 });
+    if (!data || data.error) return null;
+    const city = data.city || '';
+    const region = data.region || data.region_code || '';
+    const country = data.country_name || data.country || '';
+    const org = data.org || '';
+    const location = [city, region, country].filter(Boolean).join(', ');
+    return {
+      location: location || null,
+      org: org || null,
+    };
+  } catch (error) {
+    console.error('Error geolocating IP:', error.response?.data || error.message);
+    return null;
+  }
+}
+
 // HTML email template
 const generateEmailTemplate = (name, email, userMessage) => `
   <div style="font-family: Arial, sans-serif; color: #333; padding: 20px; background-color: #f4f4f4;">
@@ -75,6 +97,9 @@ export async function POST(request) {
     const { name, email, message: userMessage } = payload;
     const token = process.env.TELEGRAM_BOT_TOKEN;
     const chat_id = process.env.TELEGRAM_CHAT_ID;
+    const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown';
+    const origin = request.headers.get('origin') || request.headers.get('referer') || 'unknown';
+    const geo = await geolocateIp(ip);
 
     // Validate environment variables
     if (!token || !chat_id) {
@@ -84,12 +109,20 @@ export async function POST(request) {
       }, { status: 400 });
     }
 
-    const message = `📧 *New message*
-        👤 *Name:* ${name}
-        ✉️ *Email:* ${email}
-        📅 *Date:* ${new Date().toLocaleString('en-US')}
-        💬 *Message:* ${userMessage}
-        `;
+    const message = [
+      '📧 *New message*',
+      `👤 *Name:* ${name}`,
+      `✉️ *Email:* ${email}`,
+      `📅 *Date:* ${new Date().toLocaleString('en-US')}`,
+      `🌐 *IP:* ${ip}`,
+      geo?.location ? `📍 *Location:* ${geo.location}` : null,
+      geo?.org ? `🏢 *ISP/Org:* ${geo.org}` : null,
+      `🔗 *Origin:* ${origin}`,
+      '💬 *Message:*',
+      '```',
+      userMessage,
+      '```',
+    ].filter(Boolean).join('\n');
 
     // Send Telegram message
     const telegramSuccess = await sendTelegramMessage(token, chat_id, message);
