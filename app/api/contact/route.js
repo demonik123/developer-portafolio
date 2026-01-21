@@ -21,6 +21,8 @@ async function sendTelegramMessage(token, chat_id, message) {
     const res = await axios.post(url, {
       text: message,
       chat_id,
+      parse_mode: 'Markdown',
+      disable_web_page_preview: true,
     });
     return res.data.ok;
   } catch (error) {
@@ -82,15 +84,20 @@ export async function POST(request) {
       }, { status: 400 });
     }
 
-    const message = `New message from ${name}\n\nEmail: ${email}\n\nMessage:\n\n${userMessage}\n\n`;
+    const message = `📧 *New message*
+        👤 *Name:* ${name}
+        ✉️ *Email:* ${email}
+        📅 *Date:* ${new Date().toLocaleString('en-US')}
+        💬 *Message:* ${userMessage}
+        `;
 
     // Send Telegram message
     const telegramSuccess = await sendTelegramMessage(token, chat_id, message);
 
     // Send email
-    const emailSuccess = await sendEmail(payload, message);
+    // const emailSuccess = await sendEmail(payload, message);
 
-    if (telegramSuccess && emailSuccess) {
+    if (telegramSuccess /* && emailSuccess */) {
       return NextResponse.json({
         success: true,
         message: 'Message and email sent successfully!',
