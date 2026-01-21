@@ -11,6 +11,8 @@ import ContactForm from "./contact-form";
 
 export default async function ContactSection() {
   const t = await getTranslations("contact");
+  const phoneHref = personalData.phone.replace(/\s+/g, "");
+  const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(personalData.address)}`;
   return (
     <div
       id="contact"
@@ -26,27 +28,39 @@ export default async function ContactSection() {
         <ContactForm />
         <div className="lg:w-3/4 ">
           <div className="flex flex-col gap-5 lg:gap-9">
-            <p className="text-sm md:text-xl flex items-center gap-3">
+            <Link
+              target="_blank"
+              href={`mailto:${personalData.email}`}
+              className="text-sm md:text-xl flex items-center gap-3"
+            >
               <MdAlternateEmail
                 className="bg-muted text-foreground p-2 rounded-full hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300 cursor-pointer"
                 size={36}
               />
               <span>{personalData.email}</span>
-            </p>
-            <p className="text-sm md:text-xl flex items-center gap-3">
+            </Link>
+            <Link
+              target="_blank"
+              href={`tel:${phoneHref}`}
+              className="text-sm md:text-xl flex items-center gap-3"
+            >
               <IoMdCall
                 className="bg-muted text-foreground p-2 rounded-full hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300 cursor-pointer"
                 size={36}
               />
               <span>{personalData.phone}</span>
-            </p>
-            <p className="text-sm md:text-xl flex items-center gap-3">
+            </Link>
+            <Link
+              target="_blank"
+              href={mapsHref}
+              className="text-sm md:text-xl flex items-center gap-3"
+            >
               <CiLocationOn
                 className="bg-muted text-foreground p-2 rounded-full hover:bg-primary hover:text-primary-foreground hover:scale-110 transition-all duration-300 cursor-pointer"
                 size={36}
               />
               <span>{personalData.address}</span>
-            </p>
+            </Link>
           </div>
           <div className="mt-8 lg:mt-16 flex items-center gap-5 lg:gap-10">
             <Link target="_blank" href={personalData.github}>
