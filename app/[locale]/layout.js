@@ -12,7 +12,7 @@ export default async function LocaleLayout({ children, params }) {
 
   return (
     <NextIntlClientProvider messages={messages} locale={locale}>
-      <main className="min-h-screen relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 dark scroll-smooth">
+      <main className="min-h-screen relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 scroll-smooth">
         <Navbar />
         {children}
         <ScrollToTop />

@@ -101,3 +101,13 @@ nextjs-portal {
 .sticky-card {
   top: calc(var(--index) * 4rem);
 }
+
+/* Skill text color helper that reacts to theme */
+@layer utilities {
+  .skill-text {
+    color: #784c8a !important; /* light mode */
+  }
+  .dark .skill-text {
+    color: #fcd34d !important; /* amber-300 in dark mode */
+  }
+}

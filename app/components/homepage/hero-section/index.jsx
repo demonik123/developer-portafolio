@@ -100,29 +100,29 @@ export default async function HeroSection() {
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-foreground">name:</span>
                 <span className="text-muted-foreground">{`'`}</span>
-                <span className="text-amber-300">Boris Leonel</span>
+                <span className="skill-text">Boris Leonel</span>
                 <span className="text-muted-foreground">{`',`}</span>
               </div>
               <div className="ml-4 lg:ml-8 mr-2">
-                <span className=" text-foreground">skills: </span>
+                <span className="text-foreground">skills: </span>
                 <span className="text-muted-foreground">{`['`}</span>
 
-                <span className="text-amber-300">React</span>
+                <span className="skill-text">React</span>
                 <span className="text-muted-foreground">{"', '"}</span>
 
-                <span className="text-amber-300">Next.js</span>
+                <span className="skill-text">Next.js</span>
                 <span className="text-muted-foreground">{"', '"}</span>
 
-                <span className="text-amber-300">TypeScript</span>
+                <span className="skill-text">TypeScript</span>
                 <span className="text-muted-foreground">{"', '"}</span>
 
-                <span className="text-amber-300">Redux</span>
+                <span className="skill-text">Flutter</span>
                 <span className="text-muted-foreground">{"', '"}</span>
 
-                <span className="text-amber-300">Flutter</span>
+                <span className="skill-text">Dart</span>
                 <span className="text-muted-foreground">{"', '"}</span>
 
-                <span className="text-amber-300">Material UI</span>
+                <span className="skill-text">Material UI</span>
                 <span className="text-muted-foreground">{"'],"}</span>
               </div>
 
@@ -163,17 +163,17 @@ export default async function HeroSection() {
               <div>
                 <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
                 <span className="mr-2 text-foreground">hardWorker</span>
-                <span className="text-amber-300">&amp;&amp;</span>
+                <span className="skill-text">&amp;&amp;</span>
               </div>
               <div>
                 <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
                 <span className="mr-2 text-foreground">problemSolver</span>
-                <span className="text-amber-300">&amp;&amp;</span>
+                <span className="skill-text">&amp;&amp;</span>
               </div>
               <div>
                 <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
                 <span className="mr-2 text-foreground">skills.length</span>
-                <span className="mr-2 text-amber-300">&gt;=</span>
+                <span className="mr-2 skill-text">&gt;=</span>
                 <span className="text-orange-400">5</span>
               </div>
               <div>

@@ -31,7 +31,7 @@ function ProjectCard({ project }) {
           <div>
             <span className="ml-4 lg:ml-8 mr-2 text-foreground">name:</span>
             <span className="text-muted-foreground">{`'`}</span>
-            <span className="text-amber-300">{project.name}</span>
+            <span className="skill-text">{project.name}</span>
             <span className="text-muted-foreground">{`',`}</span>
           </div>
 
@@ -41,7 +41,7 @@ function ProjectCard({ project }) {
             {
               project.tools.map((tag, i) => (
                 <React.Fragment key={i}>
-                  <span className="text-amber-300">{tag}</span>
+                  <span className="skill-text">{tag}</span>
                   {
                     project.tools?.length - 1 !== i &&
                     <span className="text-muted-foreground">{`', '`}</span>
