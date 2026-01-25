@@ -27,8 +27,8 @@ export default function RootLayout({ children }) {
           pauseOnHover
           theme="colored"
         />
-        {children}
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
+        {children}
       </body>
     </html>
   );
