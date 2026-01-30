@@ -1,5 +1,5 @@
 // @flow strict
-'use client';
+"use client";
 
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
@@ -8,9 +8,8 @@ import { HiMenu, HiX } from "react-icons/hi";
 import ThemeToggle from "./helper/theme-toggle";
 import LanguageToggle from "./language-toggle";
 
-
 function Navbar() {
-  const t = useTranslations('navigation');
+  const t = useTranslations("navigation");
   const locale = useLocale();
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,32 +22,83 @@ function Navbar() {
         <div className="flex flex-shrink-0 items-center">
           <Link
             href={`/${locale}`}
-            className="text-primary text-xl md:text-2xl font-bold tracking-tight">
+            className="text-primary text-xl md:text-2xl font-bold tracking-tight"
+          >
             BORIS LEONEL
           </Link>
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex w-auto flex-row items-center gap-1 text-sm md:space-x-1" id="navbar-default">
+        <ul
+          className="hidden md:flex w-auto flex-row items-center gap-1 text-sm md:space-x-1"
+          id="navbar-default"
+        >
           <li>
-            <Link className="block px-3 py-2 rounded-md hover:bg-muted/60 transition-colors" href={`/${locale}#about`}>
-              <div className="text-sm text-foreground opacity-80 hover:opacity-100">{t('about')}</div>
+            <Link
+              className="block px-3 py-2 rounded-md hover:bg-muted/60 transition-colors"
+              href={`/${locale}#about`}
+            >
+              <div className="text-sm text-foreground opacity-80 hover:opacity-100">
+                {t("about")}
+              </div>
             </Link>
           </li>
           <li>
-            <Link className="block px-3 py-2 rounded-md hover:bg-muted/60 transition-colors" href={`/${locale}#experience`}><div className="text-sm text-foreground opacity-80 hover:opacity-100">{t('experience')}</div></Link>
+            <Link
+              className="block px-3 py-2 rounded-md hover:bg-muted/60 transition-colors"
+              href={`/${locale}#experience`}
+            >
+              <div className="text-sm text-foreground opacity-80 hover:opacity-100">
+                {t("experience")}
+              </div>
+            </Link>
           </li>
           <li>
-            <Link className="block px-3 py-2 rounded-md hover:bg-muted/60 transition-colors" href={`/${locale}#skills`}><div className="text-sm text-foreground opacity-80 hover:opacity-100">{t('skills')}</div></Link>
+            <Link
+              className="block px-3 py-2 rounded-md hover:bg-muted/60 transition-colors"
+              href={`/${locale}#skills`}
+            >
+              <div className="text-sm text-foreground opacity-80 hover:opacity-100">
+                {t("skills")}
+              </div>
+            </Link>
           </li>
           <li>
-            <Link className="block px-3 py-2 rounded-md hover:bg-muted/60 transition-colors" href={`/${locale}#education`}><div className="text-sm text-foreground opacity-80 hover:opacity-100">{t('education')}</div></Link>
+            <Link
+              className="block px-3 py-2 rounded-md hover:bg-muted/60 transition-colors"
+              href={`/${locale}#education`}
+            >
+              <div className="text-sm text-foreground opacity-80 hover:opacity-100">
+                {t("education")}
+              </div>
+            </Link>
           </li>
           <li>
-            <Link className="block px-3 py-2 rounded-md hover:bg-muted/60 transition-colors" href={`/${locale}#projects`}><div className="text-sm text-foreground opacity-80 hover:opacity-100">{t('projects')}</div></Link>
+            <Link
+              className="block px-3 py-2 rounded-md hover:bg-muted/60 transition-colors"
+              href={`/${locale}#projects`}
+            >
+              <div className="text-sm text-foreground opacity-80 hover:opacity-100">
+                {t("projects")}
+              </div>
+            </Link>
           </li>
-          <li className="pl-2"><LanguageToggle /></li>
-          <li className="pl-2"><ThemeToggle /></li>
+          <li>
+            <Link
+              className="block px-3 py-2 rounded-md hover:bg-muted/60 transition-colors"
+              href={`/${locale}#contact`}
+            >
+              <div className="text-sm text-foreground opacity-80 hover:opacity-100">
+                {t("contact")}
+              </div>
+            </Link>
+          </li>
+          <li className="pl-2">
+            <LanguageToggle />
+          </li>
+          <li className="pl-2">
+            <ThemeToggle />
+          </li>
         </ul>
 
         {/* Mobile Menu Button */}
@@ -60,7 +110,11 @@ function Navbar() {
             className="p-2 rounded-md hover:bg-muted/60 transition-colors"
             aria-label="Toggle menu"
           >
-            {isOpen ? <HiX size={24} className="text-foreground" /> : <HiMenu size={24} className="text-foreground" />}
+            {isOpen ? (
+              <HiX size={24} className="text-foreground" />
+            ) : (
+              <HiMenu size={24} className="text-foreground" />
+            )}
           </button>
         </div>
       </div>
@@ -70,48 +124,69 @@ function Navbar() {
         <div className="md:hidden border-t border-border bg-background">
           <ul className="flex flex-col py-4 px-4 space-y-2">
             <li>
-              <Link 
-                className="block px-4 py-3 rounded-md hover:bg-muted/60 transition-colors" 
+              <Link
+                className="block px-4 py-3 rounded-md hover:bg-muted/60 transition-colors"
                 href={`/${locale}#about`}
                 onClick={closeMenu}
               >
-                <div className="text-base text-foreground opacity-80 hover:opacity-100">{t('about')}</div>
+                <div className="text-base text-foreground opacity-80 hover:opacity-100">
+                  {t("about")}
+                </div>
               </Link>
             </li>
             <li>
-              <Link 
-                className="block px-4 py-3 rounded-md hover:bg-muted/60 transition-colors" 
+              <Link
+                className="block px-4 py-3 rounded-md hover:bg-muted/60 transition-colors"
                 href={`/${locale}#experience`}
                 onClick={closeMenu}
               >
-                <div className="text-base text-foreground opacity-80 hover:opacity-100">{t('experience')}</div>
+                <div className="text-base text-foreground opacity-80 hover:opacity-100">
+                  {t("experience")}
+                </div>
               </Link>
             </li>
             <li>
-              <Link 
-                className="block px-4 py-3 rounded-md hover:bg-muted/60 transition-colors" 
+              <Link
+                className="block px-4 py-3 rounded-md hover:bg-muted/60 transition-colors"
                 href={`/${locale}#skills`}
                 onClick={closeMenu}
               >
-                <div className="text-base text-foreground opacity-80 hover:opacity-100">{t('skills')}</div>
+                <div className="text-base text-foreground opacity-80 hover:opacity-100">
+                  {t("skills")}
+                </div>
               </Link>
             </li>
             <li>
-              <Link 
-                className="block px-4 py-3 rounded-md hover:bg-muted/60 transition-colors" 
+              <Link
+                className="block px-4 py-3 rounded-md hover:bg-muted/60 transition-colors"
                 href={`/${locale}#education`}
                 onClick={closeMenu}
               >
-                <div className="text-base text-foreground opacity-80 hover:opacity-100">{t('education')}</div>
+                <div className="text-base text-foreground opacity-80 hover:opacity-100">
+                  {t("education")}
+                </div>
               </Link>
             </li>
             <li>
-              <Link 
-                className="block px-4 py-3 rounded-md hover:bg-muted/60 transition-colors" 
+              <Link
+                className="block px-4 py-3 rounded-md hover:bg-muted/60 transition-colors"
                 href={`/${locale}#projects`}
                 onClick={closeMenu}
               >
-                <div className="text-base text-foreground opacity-80 hover:opacity-100">{t('projects')}</div>
+                <div className="text-base text-foreground opacity-80 hover:opacity-100">
+                  {t("projects")}
+                </div>
+              </Link>
+            </li>
+            <li>
+              <Link
+                className="block px-4 py-3 rounded-md hover:bg-muted/60 transition-colors"
+                href={`/${locale}#contact`}
+                onClick={closeMenu}
+              >
+                <div className="text-base text-foreground opacity-80 hover:opacity-100">
+                  {t("projects")}
+                </div>
               </Link>
             </li>
           </ul>
@@ -119,6 +194,6 @@ function Navbar() {
       )}
     </nav>
   );
-};
+}
 
 export default Navbar;
