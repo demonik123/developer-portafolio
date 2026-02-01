@@ -11,5 +11,5 @@ export const personalData = {
   linkedIn: "https://www.linkedin.com/in/boris-leonel-8a3296175/",
   stackOverflow: "https://stackoverflow.com/users/16840768/boris-leonel",
   devUsername: "borisleonel",
-  resume: "https://drive.google.com/file/d/1D70dTUY6YajfgYFwnxfP0i8zVyUZBEQu/view?usp=sharing"
+  resume: "https://drive.google.com/file/d/1XL1sJtyQ93ywYPt0s7hFOobNcnZ9eyGh/view?usp=sharing"
 };
