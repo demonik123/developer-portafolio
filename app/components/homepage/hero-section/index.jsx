@@ -13,7 +13,7 @@ import { SiLeetcode } from "react-icons/si";
 export default async function HeroSection() {
   const t = await getTranslations("hero");
   return (
-    <section className="relative flex flex-col items-center justify-between py-4 lg:py-12">
+    <section className="relative flex flex-col items-center justify-between py-4 lg:py-12" itemScope itemType="https://schema.org/Person">
       <Image
         src="/hero.svg"
         alt="Hero"
@@ -24,11 +24,13 @@ export default async function HeroSection() {
 
       <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-12 gap-y-8 z-10">
         <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
-          <h1 className="text-3xl font-bold leading-10 text-foreground md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]">
+          <h1 className="text-3xl font-bold leading-10 text-foreground md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]" itemProp="name">
             {t("greeting")}
             <br />
-            <span className="text-primary">{t("designation")}</span>
+            <span className="text-primary" itemProp="jobTitle">{t("designation")}</span>
           </h1>
+          <meta itemProp="description" content="Soy Boris Leonel Desarrollador Full Stack especializado en React, Next.js, NestJS, Flutter y TypeScript" />
+          <meta itemProp="knowsAbout" content="React, Next.js, TypeScript, Flutter, Dart, NestJS, Material UI" />
 
           <div className="my-12 flex items-center gap-5">
             <Link
