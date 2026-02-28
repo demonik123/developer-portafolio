@@ -6,6 +6,14 @@ import Navbar from "../components/navbar";
 import "../css/card.scss";
 import "../css/globals.scss";
 
+export async function generateMetadata() {
+  return {
+    verification: {
+      google: "M8jc5iMQkb3HlAo4sIXTIbPQsDk9OCF0piaWPENXc_Q",
+    },
+  };
+}
+
 export default async function LocaleLayout({ children, params }) {
   const {locale} = await params;
   const messages = await getMessages();
