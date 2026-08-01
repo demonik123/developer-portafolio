@@ -47,6 +47,7 @@ export default async function Education() {
                 <GlowCard
                   key={education.id ?? idx}
                   identifier={`education-${education.id ?? idx}`}
+                  continuous
                 >
                   <div className="p-4 relative text-foreground">
                     <div className="flex justify-center">
