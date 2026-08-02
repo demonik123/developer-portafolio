@@ -10,7 +10,7 @@ export default async function AboutSection() {
   const description = messages?.about?.description ?? "";
 
   return (
-    <div id="about" className="my-12 lg:my-16 relative scroll-mt-24 sm:scroll-mt-28 lg:scroll-mt-32">
+    <div id="about" className="mb-12 lg:my-16 relative scroll-mt-24 sm:scroll-mt-28 lg:scroll-mt-32">
       <div className="hidden lg:flex flex-col items-center absolute top-16 -right-8">
         <span className="bg-primary text-primary-foreground w-fit rotate-90 p-2 px-5 text-xl rounded-md shadow-subtle">
           {t("title")}
@@ -32,7 +32,7 @@ export default async function AboutSection() {
             width={280}
             height={280}
             alt="Boris Mita"
-            className="rounded-lg transition-all duration-1000 grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
+            className="rounded-lg transition-all duration-1000  cursor-pointer"
           />
         </div>
       </div>
