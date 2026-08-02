@@ -16,11 +16,36 @@
     "buttons": {
       "contact": "Contact Me",
       "resume": "Download Resume"
+    },
+    "code": {
+      "const": "const",
+      "coder": "Developer",
+      "name": "name",
+      "skills": "skills",
+      "true": "true",
+      "length": "length",
+      "hardWorker": "hardWorker",
+      "quickLearner": "quickLearner",
+      "problemSolver": "problemSolver",
+      "hireable": "availableForHire",
+      "function": "function",
+      "return": "return",
+      "this": "this",
+      "skillsList": [
+        "Next.js",
+        "Vue.js",
+        "NestJS",
+        "Flutter",
+        "Git",
+        "CI/CD",
+        "Docker",
+        "Postgres"
+      ]
     }
   },
   "about": {
     "title": "About Me",
-    "description": "Full Stack Developer with experience in frontend using React, Next.js and Material UI, backend with NestJS, and mobile development with Flutter. Specialized in intuitive interfaces, reusable components and structured APIs, with focus on clean, scalable and efficient code."
+    "description": "Full Stack Developer with over 3 years of experience building web and mobile applications for public institutions and private companies. Experienced in frontend development with Vue, Nuxt, React, and Next.js; backend development with NestJS and Laravel; REST API development and integration, relational databases, Docker, Git, and Agile methodologies. Able to quickly adapt to new technologies and focused on building scalable, high-performance solutions."
   },
   "experience": {
     "title": "Experience",

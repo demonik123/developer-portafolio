@@ -9,11 +9,12 @@ import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
+import HeroSectionCode from "./HeroSectionCode";
 
 export default async function HeroSection() {
   const t = await getTranslations("hero");
   return (
-    <section className="relative flex flex-col items-center justify-between py-4 lg:py-12" itemScope itemType="https://schema.org/Person">
+    <section className="relative flex flex-col items-center justify-between pt-4 lg:py-12" itemScope itemType="https://schema.org/Person">
       <Image
         src="/hero.svg"
         alt="Hero"
@@ -23,7 +24,7 @@ export default async function HeroSection() {
       />
 
       <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-12 gap-y-8 z-10">
-        <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
+        <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-4 lg:pt-10">
           <h1 className="text-3xl font-bold leading-10 text-foreground md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]" itemProp="name">
             {t("greeting")}
             <br />
@@ -91,104 +92,7 @@ export default async function HeroSection() {
               <div className="h-3 w-3 rounded-full bg-green-200"></div>
             </div>
           </div>
-          <div className="overflow-hidden border-t border-border px-4 lg:px-8 py-4 lg:py-8">
-            <code className="font-mono text-xs md:text-sm lg:text-base">
-              <div className="blink">
-                <span className="mr-2 text-primary">const</span>
-                <span className="mr-2 text-foreground">coder</span>
-                <span className="mr-2 text-primary">=</span>
-                <span className="text-muted-foreground">{"{"}</span>
-              </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-foreground">name:</span>
-                <span className="text-muted-foreground">{`'`}</span>
-                <span className="skill-text">Boris Leonel</span>
-                <span className="text-muted-foreground">{`',`}</span>
-              </div>
-              <div className="ml-4 lg:ml-8 mr-2">
-                <span className="text-foreground">skills: </span>
-                <span className="text-muted-foreground">{`['`}</span>
-
-                <span className="skill-text">React</span>
-                <span className="text-muted-foreground">{"', '"}</span>
-
-                <span className="skill-text">Next.js</span>
-                <span className="text-muted-foreground">{"', '"}</span>
-
-                <span className="skill-text">TypeScript</span>
-                <span className="text-muted-foreground">{"', '"}</span>
-
-                <span className="skill-text">Flutter</span>
-                <span className="text-muted-foreground">{"', '"}</span>
-
-                <span className="skill-text">Dart</span>
-                <span className="text-muted-foreground">{"', '"}</span>
-
-                <span className="skill-text">Material UI</span>
-                <span className="text-muted-foreground">{"'],"}</span>
-              </div>
-
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-foreground">
-                  hardWorker:
-                </span>
-                <span className="text-orange-400">true</span>
-                <span className="text-muted-foreground">,</span>
-              </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-foreground">
-                  quickLearner:
-                </span>
-                <span className="text-orange-400">true</span>
-                <span className="text-muted-foreground">,</span>
-              </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-foreground">
-                  problemSolver:
-                </span>
-                <span className="text-orange-400">true</span>
-                <span className="text-muted-foreground">,</span>
-              </div>
-              <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-green-400">
-                  hireable:
-                </span>
-                <span className="text-orange-400">function</span>
-                <span className="text-muted-foreground">{"() {"}</span>
-              </div>
-              <div>
-                <span className="ml-8 lg:ml-16 mr-2 text-orange-400">
-                  return
-                </span>
-                <span className="text-muted-foreground">{`(`}</span>
-              </div>
-              <div>
-                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-foreground">hardWorker</span>
-                <span className="skill-text">&amp;&amp;</span>
-              </div>
-              <div>
-                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-foreground">problemSolver</span>
-                <span className="skill-text">&amp;&amp;</span>
-              </div>
-              <div>
-                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
-                <span className="mr-2 text-foreground">skills.length</span>
-                <span className="mr-2 skill-text">&gt;=</span>
-                <span className="text-orange-400">5</span>
-              </div>
-              <div>
-                <span className="ml-8 lg:ml-16 mr-2 text-muted-foreground">{`);`}</span>
-              </div>
-              <div>
-                <span className="ml-4 lg:ml-8 text-muted-foreground">{`};`}</span>
-              </div>
-              <div>
-                <span className="text-muted-foreground">{`};`}</span>
-              </div>
-            </code>
-          </div>
+          <HeroSectionCode />
         </div>
       </div>
     </section>
