@@ -72,8 +72,8 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className="sticky top-0 z-[1000] w-full backdrop-blur supports-[backdrop-filter]:bg-background border-b border-border bg-background">
-      <div className="flex items-center justify-between py-4 px-4 md:px-0">
+    <nav className="sticky top-0 z-[1000] w-full border-b border-border/70 bg-background/85 px-2 backdrop-blur-xl supports-[backdrop-filter]:bg-background/70 lg:px-4">
+      <div className="flex items-center justify-between py-4 px-0 md:px-0">
         <div className="flex flex-shrink-0 items-center">
           <Link
             href={`/${locale}`}
@@ -94,9 +94,7 @@ function Navbar() {
               href={`/${locale}#about`}
               aria-current={activeSection === "about" ? "location" : undefined}
             >
-              <div className="text-sm">
-                {t("about")}
-              </div>
+              <div className="text-sm">{t("about")}</div>
             </Link>
           </li>
           <li>
@@ -107,9 +105,7 @@ function Navbar() {
                 activeSection === "experience" ? "location" : undefined
               }
             >
-              <div className="text-sm">
-                {t("experience")}
-              </div>
+              <div className="text-sm">{t("experience")}</div>
             </Link>
           </li>
           <li>
@@ -118,9 +114,7 @@ function Navbar() {
               href={`/${locale}#skills`}
               aria-current={activeSection === "skills" ? "location" : undefined}
             >
-              <div className="text-sm">
-                {t("skills")}
-              </div>
+              <div className="text-sm">{t("skills")}</div>
             </Link>
           </li>
           <li>
@@ -131,9 +125,7 @@ function Navbar() {
                 activeSection === "education" ? "location" : undefined
               }
             >
-              <div className="text-sm">
-                {t("education")}
-              </div>
+              <div className="text-sm">{t("education")}</div>
             </Link>
           </li>
           <li>
@@ -144,9 +136,7 @@ function Navbar() {
                 activeSection === "projects" ? "location" : undefined
               }
             >
-              <div className="text-sm">
-                {t("projects")}
-              </div>
+              <div className="text-sm">{t("projects")}</div>
             </Link>
           </li>
           <li>
@@ -157,9 +147,7 @@ function Navbar() {
                 activeSection === "contact" ? "location" : undefined
               }
             >
-              <div className="text-sm">
-                {t("contact")}
-              </div>
+              <div className="text-sm">{t("contact")}</div>
             </Link>
           </li>
           <li className="pl-2">
@@ -171,7 +159,7 @@ function Navbar() {
         </ul>
 
         {/* Mobile Menu Button */}
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-1 md:hidden">
           <LanguageToggle />
           <ThemeToggle />
           <button
@@ -190,7 +178,7 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden border-t border-border bg-background">
+        <div className="md:hidden border-t border-border/70 bg-background/85 backdrop-blur-xl supports-[backdrop-filter]:bg-background/70">
           <ul className="flex flex-col py-4 px-4 space-y-2">
             <li>
               <Link
@@ -200,11 +188,11 @@ function Navbar() {
                   setActiveSection("about");
                   closeMenu();
                 }}
-                aria-current={activeSection === "about" ? "location" : undefined}
+                aria-current={
+                  activeSection === "about" ? "location" : undefined
+                }
               >
-                <div className="text-base">
-                  {t("about")}
-                </div>
+                <div className="text-base">{t("about")}</div>
               </Link>
             </li>
             <li>
@@ -219,9 +207,7 @@ function Navbar() {
                   activeSection === "experience" ? "location" : undefined
                 }
               >
-                <div className="text-base">
-                  {t("experience")}
-                </div>
+                <div className="text-base">{t("experience")}</div>
               </Link>
             </li>
             <li>
@@ -236,9 +222,7 @@ function Navbar() {
                   activeSection === "skills" ? "location" : undefined
                 }
               >
-                <div className="text-base">
-                  {t("skills")}
-                </div>
+                <div className="text-base">{t("skills")}</div>
               </Link>
             </li>
             <li>
@@ -253,9 +237,7 @@ function Navbar() {
                   activeSection === "education" ? "location" : undefined
                 }
               >
-                <div className="text-base">
-                  {t("education")}
-                </div>
+                <div className="text-base">{t("education")}</div>
               </Link>
             </li>
             <li>
@@ -270,9 +252,7 @@ function Navbar() {
                   activeSection === "projects" ? "location" : undefined
                 }
               >
-                <div className="text-base">
-                  {t("projects")}
-                </div>
+                <div className="text-base">{t("projects")}</div>
               </Link>
             </li>
             <li>
@@ -287,9 +267,7 @@ function Navbar() {
                   activeSection === "contact" ? "location" : undefined
                 }
               >
-                <div className="text-base">
-                  {t("contact")}
-                </div>
+                <div className="text-base">{t("contact")}</div>
               </Link>
             </li>
           </ul>

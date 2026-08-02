@@ -15,13 +15,13 @@ export async function generateMetadata() {
 }
 
 export default async function LocaleLayout({ children, params }) {
-  const {locale} = await params;
+  const { locale } = await params;
   const messages = await getMessages();
 
   return (
     <NextIntlClientProvider messages={messages} locale={locale}>
+      <Navbar />
       <main className="min-h-screen relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 scroll-smooth">
-        <Navbar />
         {children}
         <ScrollToTop />
       </main>

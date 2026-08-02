@@ -1,101 +1,172 @@
-'use client';
+"use client";
 
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { usePathname } from "next/navigation";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
 export default function LanguageToggle() {
   const pathname = usePathname();
-  const router = useRouter();
-  const searchParams = useSearchParams();
+  const buttonRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
-  const [hash, setHash] = useState('');
+  const [isMounted, setIsMounted] = useState(false);
+  const [menuPosition, setMenuPosition] = useState(null);
 
-  useEffect(() => {
-    // Captura el hash inicial y actualiza cuando cambia
-    setHash(window.location.hash || '');
-    const onHashChange = () => setHash(window.location.hash || '');
-    window.addEventListener('hashchange', onHashChange);
-    return () => window.removeEventListener('hashchange', onHashChange);
+  const updateMenuPosition = useCallback(() => {
+    if (!buttonRef.current) return;
+
+    const rect = buttonRef.current.getBoundingClientRect();
+
+    setMenuPosition({
+      top: rect.bottom + 12,
+      right: Math.max(8, window.innerWidth - rect.right),
+      width: 224,
+    });
   }, []);
 
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isOpen) return;
+
+    updateMenuPosition();
+    window.addEventListener("resize", updateMenuPosition);
+    window.addEventListener("scroll", updateMenuPosition, true);
+
+    return () => {
+      window.removeEventListener("resize", updateMenuPosition);
+      window.removeEventListener("scroll", updateMenuPosition, true);
+    };
+  }, [isOpen, updateMenuPosition]);
+
   // Obtener el locale del pathname
-  const LOCALES = ['en', 'es', 'pt'];
-  const segments = pathname.split('/');
+  const segments = pathname.split("/");
   const locale = segments[1];
-  
+
   const languages = [
-    { code: 'en', label: 'English' },
-    { code: 'es', label: 'Español' },
-    { code: 'pt', label: 'Português' }
+    { code: "en", label: "English 🇺🇸" },
+    { code: "es", label: "Español 🇪🇸" },
+    { code: "pt", label: "Português 🇧🇷" },
   ];
 
-  const currentLanguage = languages.find(lang => lang.code === locale) || languages.find(lang => lang.code === 'es');
+  const currentLanguage =
+    languages.find((lang) => lang.code === locale) ||
+    languages.find((lang) => lang.code === "es");
 
   const handleLanguageChange = (newLocale) => {
-    // Si el primer segmento es un locale, lo removemos; si no, preservamos el pathname tal cual
-    const isFirstSegmentLocale = LOCALES.includes(locale);
-    const rest = isFirstSegmentLocale ? `/${segments.slice(2).join('/')}` : pathname;
-    // Normalizamos el resto para evitar doble barra en la raíz
-    const normalizedRest = rest === '/' ? '' : rest;
+    const newUrl = `/${newLocale}`;
 
-    const search = searchParams.toString();
-    const query = search ? `?${search}` : '';
-    const hashSuffix = hash || '';
-
-    const newUrl = `/${newLocale}${normalizedRest}${query}${hashSuffix}`;
-    
     setIsOpen(false);
     // Usar window.location para forzar recarga completa
     window.location.href = newUrl;
   };
 
-  const getNewPathname = (newLocale) => {
-    // Si el primer segmento es un locale, lo removemos; si no, preservamos el pathname tal cual
-    const isFirstSegmentLocale = LOCALES.includes(locale);
-    const rest = isFirstSegmentLocale ? `/${segments.slice(2).join('/')}` : pathname;
-    // Normalizamos el resto para evitar doble barra en la raíz
-    const normalizedRest = rest === '/' ? '' : rest;
-
-    const search = searchParams.toString();
-    const query = search ? `?${search}` : '';
-    const hashSuffix = hash || '';
-
-    return `/${newLocale}${normalizedRest}${query}${hashSuffix}`;
-  };
-
   return (
-    <div className="relative">
+    <div className="relative z-50">
       <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors text-white hover:cursor-pointer"
+        ref={buttonRef}
+        onClick={() => {
+          updateMenuPosition();
+          setIsOpen(!isOpen);
+        }}
+        className="
+            group flex items-center gap-2
+            rounded-xl
+            border
+            px-2 py-1 ml-2
+            backdrop-blur-xl
+            transition-all duration-300
+            cursor-pointer
+          "
         aria-label="Cambiar idioma"
         aria-expanded={isOpen}
-        title="Cambiar idioma"
       >
-        <span className="text-lg">🌐</span>
-        <span className="text-sm font-medium">{currentLanguage?.code.toUpperCase()}</span>
+        <span
+          className="
+          flex h-7 w-7 items-center justify-center
+          rounded-lg
+          text-lg
+        "
+        >
+          🌐
+        </span>
+
+        <span className="text-sm font-semibold tracking-wide">
+          {currentLanguage?.code.toUpperCase()}
+        </span>
+
+        <svg
+          className={`h-4 w-4 transition-transform duration-300 ${
+            isOpen ? "rotate-180" : ""
+          }`}
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
       </button>
 
-      {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg border border-gray-700 z-50">
-          <ul className="py-0 ">
-            {languages.map((lang) => (
-              <li key={lang.code}>
-                <button
-                  onClick={() => handleLanguageChange(lang.code)}
-                  className={`block w-full text-left px-4 py-2 text-sm transition-colors hover:cursor-pointer ${
-                    locale === lang.code
-                      ? 'bg-blue-600 text-white font-bold'
-                      : 'text-gray-300 hover:bg-gray-700 hover:text-white'
-                  }`}
-                >
-                  {lang.label}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+      {isMounted && isOpen && menuPosition
+        ? createPortal(
+            <div
+              style={menuPosition}
+              className="
+                fixed z-[1100]
+                overflow-hidden rounded-2xl
+                border border-border/70
+                bg-background/90
+                text-foreground
+                backdrop-blur-[5px]
+                ring-1 ring-white/10
+                shadow-2xl shadow-black/50
+                supports-[backdrop-filter]:bg-background/70
+              "
+            >
+              <ul className="p-2">
+                {languages.map((lang) => (
+                  <li key={lang.code}>
+                    <button
+                      onClick={() => handleLanguageChange(lang.code)}
+                      className={`
+                  flex w-full items-center justify-between
+                  rounded-xl
+                  px-4 py-3
+                  text-sm
+                  mb-1
+                  transition-all duration-200
+                  cursor-pointer
+                `}
+                    >
+                      <span className="font-medium">{lang.label}</span>
+
+                      {locale === lang.code && (
+                        <span
+                          className="
+                      flex h-5 w-5
+                      items-center justify-center
+                      rounded-full
+                      bg-white/20
+                      text-xs
+                    "
+                        >
+                          ✓
+                        </span>
+                      )}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>,
+            document.body,
+          )
+        : null}
     </div>
   );
 }
