@@ -3,6 +3,7 @@
   "description": "Portfolio",
   "version": "0.1.0",
   "private": true,
+  "author": "Boris Mita",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

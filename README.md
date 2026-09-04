@@ -17,6 +17,7 @@ Un portafolio web moderno y responsivo construido con **Next.js**, diseñado par
 ## 🛠️ Stack Tecnológico
 
 ### Frontend
+
 - **Next.js** 16.0.10 - Framework React moderno
 - **React** 19.2.3 - Librería de UI
 - **Tailwind CSS** 4.1.16 - Framework de estilos
@@ -26,11 +27,13 @@ Un portafolio web moderno y responsivo construido con **Next.js**, diseñado par
 - **React Toastify** 10.0.4 - Notificaciones
 
 ### Backend & API
+
 - **Nodemailer** 6.9.15 - Envío de emails
 - **Axios** 1.6.8 - Cliente HTTP
 - **React Google reCAPTCHA** 3.1.0 - Verificación anti-spam
 
 ### Internacionalización
+
 - **next-intl** 4.7.0 - Gestión de idiomas
 
 ## 📦 Dependencias Principales
@@ -51,18 +54,21 @@ Un portafolio web moderno y responsivo construido con **Next.js**, diseñado par
 ## 🚀 Inicio Rápido
 
 ### Requisitos Previos
+
 - Node.js >= 18.x
 - pnpm (recomendado) o npm
 
 ### Instalación
 
 1. **Clonar el repositorio**
+
 ```bash
 git clone <repository-url>
 cd developer-portfolio
 ```
 
 2. **Instalar dependencias**
+
 ```bash
 pnpm install
 # o
@@ -110,6 +116,7 @@ npm run start
 ## 🐳 Docker
 
 ### Desarrollo
+
 ```bash
 docker-compose up
 ```
@@ -117,6 +124,7 @@ docker-compose up
 El contenedor de desarrollo usa `Dockerfile.dev` con hot reload.
 
 ### Producción
+
 ```bash
 docker build -f Dockerfile.prod -t developer-portfolio:latest .
 docker run -p 3000:3000 developer-portfolio:latest
@@ -167,6 +175,7 @@ docker run -p 3000:3000 developer-portfolio:latest
 ### Idiomas Soportados
 
 Los idiomas se configuran en `i18n/routing.js`. Archivos de traducciones en `messages/`:
+
 - `en.json` - English
 - `es.json` - Español
 - `pt.json` - Português
@@ -174,6 +183,7 @@ Los idiomas se configuran en `i18n/routing.js`. Archivos de traducciones en `mes
 ### Datos del Portafolio
 
 Editar archivos en `utils/data/`:
+
 - `personal-data.js` - Información personal
 - `skills.js` - Habilidades técnicas
 - `experience.js` - Experiencia laboral
@@ -187,16 +197,19 @@ Archivos de animación JSON en `app/assets/lottie/`
 ## 📧 Formulario de Contacto
 
 El formulario de contacto está integrado con:
+
 - **Gmail**: Envía un email a tu dirección configurada
 - **Telegram**: Envía un mensaje a tu bot de Telegram
 - **Validaciones**: Email y reCAPTCHA
 
 **Configurar Gmail:**
+
 1. Habilitar autenticación de 2 factores
 2. Generar contraseña de aplicación
 3. Usar en `GMAIL_PASSKEY`
 
 **Configurar Telegram:**
+
 1. Crear bot con @BotFather
 2. Obtener token del bot
 3. Conseguir chat ID de tu cuenta
@@ -220,7 +233,7 @@ pnpm lint     # Ejecutar linter
 ## 🔗 Enlaces de Contacto
 
 - **Email**: borisleonel12@gmail.com
-- **GitHub**: https://github.com/demonik123
+- **GitHub**: https://github.com/boris-mita/
 - **LinkedIn**: https://www.linkedin.com/in/boris-leonel-8a3296175/
 - **Stack Overflow**: https://stackoverflow.com/users/16840768/boris-leonel
 - **Dev.to**: https://dev.to/borisleonel
@@ -228,6 +241,7 @@ pnpm lint     # Ejecutar linter
 ## 🤝 Contribuciones
 
 Las contribuciones son bienvenidas. Por favor:
+
 1. Fork el repositorio
 2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
 3. Commit tus cambios (`git commit -m 'Add AmazingFeature'`)
@@ -240,5 +254,5 @@ Para reportar bugs o solicitar features, abre un issue en el repositorio.
 
 ---
 
-**Desarrollado por** [Boris Leonel](https://github.com/demonik123)  
+**Desarrollado por** [Boris Leonel](https://github.com/boris-mita)  
 **Stack**: Next.js • React • Tailwind CSS • Node.js

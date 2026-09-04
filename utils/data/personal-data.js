@@ -6,7 +6,7 @@ export const personalData = {
   email: "borisleonel12@gmail.com",
   phone: "+591 68171320",
   address: "La Paz, Bolivia",
-  github: "https://github.com/demonik123",
+  github: "https://github.com/boris-mita",
   facebook: "https://www.facebook.com/boris.leonel.73/",
   linkedIn: "https://www.linkedin.com/in/boris-leonel-8a3296175/",
   stackOverflow: "https://stackoverflow.com/users/16840768/boris-leonel",
